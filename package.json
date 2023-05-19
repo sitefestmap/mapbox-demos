@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "vite dev --port 3103",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "mapbox-gl": "^2.14.1",
+    "vite": "^4.3.8"
+  }
+}
