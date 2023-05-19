@@ -5,8 +5,7 @@ mapboxgl.accessToken =
 
 const map = new mapboxgl.Map({
     container: 'map', // id
-    style: 'mapbox://styles/mapbox/streets-v12', // style URL  
-    //center: [-2.216794295951928, 51.74450005664403], //  starting position [lng, lat] (SVA)
+    style: 'mapbox://styles/mapbox/streets-v12',
     center: [-2.199771, 51.731509],
     zoom: 10.5,
 });
@@ -19,9 +18,9 @@ const routes = {
         {
             'type': 'Feature',
             'properties': {
-            'description': "Stroud Town Center",
-            'icon': 'theatre'
-        },
+                'description': "Stroud Town Center",
+                'icon': 'theatre'
+            },
             'geometry': {
                 'type': 'Point',
                 'coordinates': [51.75, -2.22]
@@ -30,14 +29,14 @@ const routes = {
         {
             'type': 'Feature',
             'properties': {
-            'description': 'The Gaslight',
-            'icon': 'theatre'
-            },
+                'description': 'The Gaslight',
+                'icon': 'theatre'
+                },
             'geometry': {
-            'type': 'Point',
-            'coordinates': [51.65, -2.12]
-            }
-            },
+                'type': 'Point',
+                'coordinates': [51.65, -2.12]
+                }
+         },
     ]
 };
 */
@@ -54,10 +53,10 @@ map.on('load', () => {
                 'type': 'Polygon',
                 'coordinates': [
                     [
-                        [ -2.31654, 51.76 ], // stonehouse
-                        [ -2.1, 51.8 ], // whiteway
+                        [ -2.31654, 51.76 ], 
+                        [ -2.1, 51.8 ],
                         [ -2.172, 51.65 ], 
-                        [ -2.31654, 51.76 ], // stonehouse
+                        [ -2.31654, 51.76 ],
                     ]
                 ]
             }
@@ -68,10 +67,10 @@ map.on('load', () => {
     map.addLayer({
         'id': 'sitefest',
         'type': 'fill',
-        'source': 'sitefest', // reference the data source
+        'source': 'sitefest',
         'layout': {},
         'paint': {
-            'fill-color': '#0080ff', // blue color fill
+            'fill-color': '#0080ff',
             'fill-opacity': 0.2
         }
     });
