@@ -2,6 +2,7 @@
 // https://docs.mapbox.com/help/glossary/symbol-layer/
 // https://docs.mapbox.com/mapbox-gl-js/example/add-image/
 // https://labs.mapbox.com/maki-icons/editor/
+// https://vitejs.dev/guide/assets.html
 
 import redIcon from '/static/mapbox-marker-icon-20px-red.png';
 import grayIcon from '/static/mapbox-marker-icon-20px-gray.png';
