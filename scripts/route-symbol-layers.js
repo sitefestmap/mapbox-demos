@@ -17,7 +17,7 @@ map.on('load', () => {
     // TODO : wrap up into one smaller block with 'icon-image': ['get', 'icon'],
     // Color contrast
     map.loadImage(
-        '/static/mapbox-marker-icon-20px-red.png',
+        './static/mapbox-marker-icon-20px-red.png',
         (error, image) => {
             if (error) throw error;
             
@@ -68,7 +68,7 @@ map.on('load', () => {
 
     // 2 Valley and Vale
     map.loadImage(
-        '/static/mapbox-marker-icon-20px-gray.png',
+        './static/mapbox-marker-icon-20px-gray.png',
         (error, image) => {
             if (error) throw error;
             
@@ -118,7 +118,7 @@ map.on('load', () => {
 
     // 3 Bisley
     map.loadImage(
-        '/static/mapbox-marker-icon-20px-blue.png',
+        './static/mapbox-marker-icon-20px-blue.png',
         (error, image) => {
             if (error) throw error;
             
@@ -168,7 +168,7 @@ map.on('load', () => {
 
     // 4 Slad Valley
     map.loadImage(
-        '/static/mapbox-marker-icon-20px-orange.png',
+        './static/mapbox-marker-icon-20px-orange.png',
         (error, image) => {
             if (error) throw error;
             map.addImage('orange-marker', image);
@@ -218,7 +218,7 @@ map.on('load', () => {
 
     // 5 Golden Valley
     map.loadImage(
-        '/static/mapbox-marker-icon-20px-purple.png',
+        './static/mapbox-marker-icon-20px-purple.png',
         (error, image) => {
             if (error) throw error;
             map.addImage('purple-marker', image);
@@ -268,7 +268,7 @@ map.on('load', () => {
     
     // 6 Nailsworth
     map.loadImage(
-        '/static/mapbox-marker-icon-20px-green.png',
+        './static/mapbox-marker-icon-20px-green.png',
         (error, image) => {
             if (error) throw error;
             map.addImage('green-marker', image);
