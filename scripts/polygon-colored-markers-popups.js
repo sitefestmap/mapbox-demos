@@ -26,17 +26,6 @@ const routes = {
                 'coordinates': [51.75, -2.22]
             }
         },
-        {
-            'type': 'Feature',
-            'properties': {
-                'description': 'The Gaslight',
-                'icon': 'theatre'
-                },
-            'geometry': {
-                'type': 'Point',
-                'coordinates': [51.65, -2.12]
-                }
-         },
     ]
 };
 */
