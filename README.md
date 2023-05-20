@@ -1,5 +1,10 @@
 # README
 
+1. Create a Dataset
+2. Export to a Tileset
+
+3. Download or Access with Mapbox datasets API
+
 ```sh
 npm i vite
 npm install --save mapbox-gl

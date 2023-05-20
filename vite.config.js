@@ -7,9 +7,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        markers: resolve(__dirname, 'markers.html'),
-        routelabels: resolve(__dirname, 'route-labels.html'),
-        checkbox: resolve(__dirname, 'checkbox-route-one-page.html'),
+        markers: resolve(__dirname, 'colored-markers.html'),
+        polygon: resolve(__dirname, 'polygon.html'),
+        polygonmarkerspopups : resolve(__dirname, 'polygon-markers-popups.html'),
+        routesymbollayers: resolve(__dirname, 'route-symbol-layers.html'),
+        checkbox: resolve(__dirname, 'checkboxes.html'),
       },
     },
   },
