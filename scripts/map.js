@@ -13,24 +13,20 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqa
 const filterGroup = document.getElementById('filter-group');
 const map = new mapboxgl.Map({
     container: 'map',
-    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/matthiasweston/clhuty4u3020p01r0f1wb6lwo',
     center: [-2.2167788, 51.7445037],
     zoom: 11.15
 });
 
 map.on('load', () => {
-    // Add a GeoJSON source containing place coordinates and information.
     map.addSource('studios', {
         'type': 'geojson',
         'data': studios
     });
-
     map.addSource('polygon', {
         'type': 'geojson',
         'data': polygon
     });
-    // Add a new layer to visualize the polygon.
     map.addLayer({
         'id': 'polygon',
         'type': 'fill',
@@ -41,7 +37,6 @@ map.on('load', () => {
             'fill-opacity': 0.1
         }
     });
-    // Add a black outline around the polygon.
     map.addLayer({
         'id': 'outline',
         'type': 'line',
@@ -52,7 +47,6 @@ map.on('load', () => {
             'line-width': 1
         }
     });
-
     map.addSource('routes', {
         'type': 'geojson',
         'data': routes
@@ -106,7 +100,6 @@ map.on('load', () => {
                 'filter': ['==', 'icon', symbol]
             });
 
-            // Add Layer checkbox and label elements 
             const input = document.createElement('input');
             input.type = 'checkbox';
             input.id = layerID;
@@ -118,7 +111,6 @@ map.on('load', () => {
             label.textContent = symbol;
             filterGroup.appendChild(label);
 
-            // Update the visibility of the layer on checkbox change
             input.addEventListener('change', (e) => {
                 map.setLayoutProperty(
                     layerID,
