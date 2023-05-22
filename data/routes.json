@@ -17,12 +17,12 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.27, 51.75]
+                "coordinates": [-2.261437, 51.753195]
             },
             "properties": {
                 "title": "Valley and Vale",
                 "icon" : "mapbox-marker-icon-gray",
-                "color":  "#5b7897"
+                "color":  "#40546a"
             }
         },
         {
@@ -58,7 +58,7 @@
             "properties": {
                 "title": "Golden Valley",
                 "icon" : "mapbox-marker-icon-green",
-                "color":  "#33c377"
+                "color":  "#207a4b"
             }
         },
         {

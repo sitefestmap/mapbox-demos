@@ -10,7 +10,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2167788, 51.7445037]
+                "coordinates": [
+                    -2.2167788,
+                    51.7445037
+                ]
             }
         },
         {
@@ -22,7 +25,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.21798684, 51.74506395]
+                "coordinates": [
+                    -2.21798684,
+                    51.74506395
+                ]
             }
         },
         {
@@ -34,7 +40,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2170453, 51.7451129]
+                "coordinates": [
+                    -2.2170453,
+                    51.7451129
+                ]
             }
         },
         {
@@ -46,7 +55,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.21523121, 51.7451931]
+                "coordinates": [
+                    -2.21523121,
+                    51.7451931
+                ]
             }
         },
         {
@@ -58,7 +70,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.23056, 51.73933]
+                "coordinates": [
+                    -2.23056,
+                    51.73933
+                ]
             }
         },
         {
@@ -70,7 +85,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.23069, 51.73922]
+                "coordinates": [
+                    -2.23069,
+                    51.73922
+                ]
             }
         },
         {
@@ -82,7 +100,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2185467, 51.7101307]
+                "coordinates": [
+                    -2.2185467,
+                    51.7101307
+                ]
             }
         },
         {
@@ -94,7 +115,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2325759, 51.7154552]
+                "coordinates": [
+                    -2.2325759,
+                    51.7154552
+                ]
             }
         },
         {
@@ -106,7 +130,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2279565, 51.7085009]
+                "coordinates": [
+                    -2.2279565,
+                    51.7085009
+                ]
             }
         },
         {
@@ -118,7 +145,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2190762, 51.7071444]
+                "coordinates": [
+                    -2.2190762,
+                    51.7071444
+                ]
             }
         },
         {
@@ -130,7 +160,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2191816, 51.695219]
+                "coordinates": [
+                    -2.2191816,
+                    51.695219
+                ]
             }
         },
         {
@@ -142,7 +175,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.220, 51.692]
+                "coordinates": [
+                    -2.220,
+                    51.692
+                ]
             }
         },
         {
@@ -150,12 +186,14 @@
             "properties": {
                 "icon": "museum-in-the-park",
                 "title": "Walled Garden Pop-up Studio",
-                "color": "#5b7897"
-                
+                "color": "#40546a"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.22542, 51.7506206]
+                "coordinates": [
+                    -2.22542,
+                    51.7506206
+                ]
             }
         },
         {
@@ -163,12 +201,14 @@
             "properties": {
                 "icon": "studio-tuft",
                 "title": "Studio Tuft",
-                "color": "#5b7897"
-                
+                "color": "#40546a"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2809237, 51.7460296]
+                "coordinates": [
+                    -2.2809237,
+                    51.7460296
+                ]
             }
         },
         {
@@ -177,11 +217,13 @@
                 "icon": "houseworkwork",
                 "title": "Houseworkwork",
                 "color": "#f79640"
-                
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.21443438, 51.7465302]
+                "coordinates": [
+                    -2.21443438,
+                    51.7465302
+                ]
             }
         },
         {
@@ -190,11 +232,13 @@
                 "icon": "landsdown-hall",
                 "title": "LandsdownHall",
                 "color": "#f79640"
-                
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2165839, 51.7463608]
+                "coordinates": [
+                    -2.2165839,
+                    51.7463608
+                ]
             }
         },
         {
@@ -203,11 +247,13 @@
                 "icon": "may-derbyshire",
                 "title": "May / Mark Derbyshire",
                 "color": "#f79640"
-                
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.214580, 51.747230]
+                "coordinates": [
+                    -2.214580,
+                    51.747230
+                ]
             }
         },
         {
@@ -216,24 +262,208 @@
                 "icon": "jack-duplock",
                 "title": "Jack Duplock",
                 "color": "#f79640"
-                
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.214570, 51.746980]
+                "coordinates": [
+                    -2.214570,
+                    51.746980
+                ]
             }
         },
         {
             "type": "Feature",
             "properties": {
-                "icon": "unit-3",
-                "title": "Unit 3",
-                "color": "#7753eb"
-                
+                "icon": "stroud-pottery",
+                "title": "Stroud Pottery",
+                "color": "#f79640"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.214399, 51.744668]
+                "coordinates": [
+                    -2.2157922,
+                    51.7472264
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "lucy-inder",
+                "title": "Lucy Inder",
+                "color": "#f79640"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.2165653,
+                    51.7487422
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "sam-marsh",
+                "title": "Sam Marsh",
+                "color": "#f79640"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.2121959,
+                    51.7504326
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "andy-bradley",
+                "title": "Andy Bradley",
+                "color": "#f79640"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.20618,
+                    51.75065
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "hawkwood",
+                "title": "Hawkwood CFT",
+                "color": "#f79640"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.209216,
+                    51.757352
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "the-camp",
+                "title": "The Camp",
+                "color": "#f79640"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.1268,
+                    51.782792
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "studio-3",
+                "title": "Studio 3",
+                "color": "#7753eb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.214399,
+                    51.744668
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "melvyn-warren-smith",
+                "title": "Melvyn Warren Smith",
+                "color": "#7753eb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.21411838,
+                    51.74450015
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "kath-williams",
+                "title": "Kath Williams",
+                "color": "#7753eb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.21247244,
+                    51.7440431
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "lower-st",
+                "title": "Lower St",
+                "color": "#7753eb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.2103256,
+                    51.7431577
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "11-horns-rd",
+                "title": "Nigel Noyes",
+                "color": "#7753eb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.206970,
+                    51.743160
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "17-horns-rd",
+                "title": "Clare Bonnet",
+                "color": "#7753eb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.206730,
+                    51.743010
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "robert-garland",
+                "title": "Robert Garland",
+                "color": "#7753eb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.19346,
+                    51.74321
+                ]
             }
         },
         {
@@ -241,12 +471,89 @@
             "properties": {
                 "icon": "trixter-studios",
                 "title": "Trixter Studios",
-                "color": "#33c377"
-                
+                "color": "#207a4b"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2071928, 51.7377367]
+                "coordinates": [
+                    -2.2071928,
+                    51.7377367
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "daisy-murdoch",
+                "title": "Daisy Murdoch",
+                "color": "#207a4b"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.204594,
+                    51.731906
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "griffin-mill",
+                "title": "Griffin Mill",
+                "color": "#207a4b"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.204595,
+                    51.731906
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "polly-lyster",
+                "title": "Polly Lyster",
+                "color": "#207a4b"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.174177,
+                    51.732944
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "victoria-works",
+                "title": "Victoria Works",
+                "color": "#207a4b"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.15227962,
+                    51.72098032
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "sarah-maingot",
+                "title": "Sarah Maingot",
+                "color": "#207a4b"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.108463,
+                    51.731540
+                ]
             }
         }
     ]

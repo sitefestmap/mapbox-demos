@@ -71,7 +71,7 @@ const studioMarkers = [
         studio: `<h2>Three Storeys</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.2191816, 51.695219],
+        lngLat: [-2.220, 51.692],
     },
     // Route 3
     {
