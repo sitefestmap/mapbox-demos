@@ -121,3 +121,43 @@ map.on('load', () => {
         }
     }
 });
+
+
+/*
+new mapboxgl.Marker({
+    element: document.getElementById('4')
+})
+    .setLngLat([-2.193, 51.767])
+    .addTo(map);
+*/
+
+
+/*
+
+routeMarkers.forEach(({ route, icon, lngLat}) => {
+     new mapboxgl.Marker({
+        icon: icon,
+        scale: 0.6
+    })
+    .setLngLat(lngLat)
+    // .setPopup(popup)
+    .addTo(map)
+})
+
+*/
+
+
+/*
+
+studioMarkers.forEach(({studio, color, lngLat}) => {
+    const popup = new mapboxgl.Popup({ offset: 25}).setHTML(studio) // change to info setHTML
+    new mapboxgl.Marker({
+        color: color,
+        scale: 0.6
+    })
+    .setLngLat(lngLat)
+    .setPopup(popup)
+    .addTo(map)
+})
+
+*/

@@ -5,7 +5,7 @@ const orange    = `hsl(30  70% 50%)`;
 const purple    = `hsl(280 70% 50%)`;
 const green     = `hsl(150 70% 50%)`;
 
-const studios = [
+const studioMarkers = [
     {
         studio: `<h2>John St Studios</h2>
         <p>...more info</p>`,
@@ -211,4 +211,4 @@ const studios = [
     },
 ]
 
-export default studios;
+export default studioMarkers;

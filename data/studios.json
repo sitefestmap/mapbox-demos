@@ -7,11 +7,70 @@
                 "icon": "john-st-studios",
                 "title": "John St Studios",
                 "color": "#f84d4d"
-                
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [-2.2167788, 51.7445037]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "weven",
+                "title": "Weven",
+                "color": "#f84d4d"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.21798684, 51.74506395]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "cacao-circle",
+                "title": "Cacao Circle",
+                "color": "#f84d4d"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2170453, 51.7451129]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "high-st",
+                "title": "High St",
+                "color": "#f84d4d"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.21523121, 51.7451931]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "bath-road",
+                "title": "135 Bath Road",
+                "color": "#4264fb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.23056, 51.73933]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "bath-road-143",
+                "title": "143 Bath Road",
+                "color": "#4264fb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.23069, 51.73922]
             }
         },
         {
@@ -29,14 +88,87 @@
         {
             "type": "Feature",
             "properties": {
+                "icon": "frogmarsh",
+                "title": "Frogmarsh Mill",
+                "color": "#4264fb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2325759, 51.7154552]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "article",
+                "title": "Article Studio",
+                "color": "#4264fb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2279565, 51.7085009]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "the-hide",
+                "title": "The Hide",
+                "color": "#4264fb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2190762, 51.7071444]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "nutshell",
+                "title": "The Nutshell Studios",
+                "color": "#4264fb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2191816, 51.695219]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "three-storeys",
+                "title": "Three Storeys",
+                "color": "#4264fb"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.220, 51.692]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "icon": "museum-in-the-park",
-                "title": "Museum in the Park",
+                "title": "Walled Garden Pop-up Studio",
                 "color": "#5b7897"
                 
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [-2.22542, 51.7506206]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "studio-tuft",
+                "title": "Studio Tuft",
+                "color": "#5b7897"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2809237, 51.7460296]
             }
         },
         {
@@ -50,6 +182,45 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [-2.21443438, 51.7465302]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "landsdown-hall",
+                "title": "LandsdownHall",
+                "color": "#f79640"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2165839, 51.7463608]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "may-derbyshire",
+                "title": "May / Mark Derbyshire",
+                "color": "#f79640"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.214580, 51.747230]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "jack-duplock",
+                "title": "Jack Duplock",
+                "color": "#f79640"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.214570, 51.746980]
             }
         },
         {

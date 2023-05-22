@@ -1,0 +1,15 @@
+<svg width="44" height="44" viewBox="0 0 44 44">
+<circle cx="22"
+        cy="22"
+        r="20"
+        stroke="white"
+        stroke-width="2"
+        fill="#f79640"/>
+<text font-size="36"
+      fill="white"
+      font-family="monaco"
+      text-anchor="middle"
+      alignment-baseline="baseline"
+      x="21"
+      y="34.4">4</text>
+</svg>
