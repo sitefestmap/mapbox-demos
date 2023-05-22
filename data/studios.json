@@ -19,11 +19,63 @@
             "properties": {
                 "icon": "marven-st-chloe",
                 "title": "Marven St Chloe",
-                "color": "#33c377"
+                "color": "#4264fb"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [-2.2185467, 51.7101307]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "museum-in-the-park",
+                "title": "Museum in the Park",
+                "color": "#5b7897"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.22542, 51.7506206]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "houseworkwork",
+                "title": "Houseworkwork",
+                "color": "#f79640"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.21443438, 51.7465302]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "unit-3",
+                "title": "Unit 3",
+                "color": "#7753eb"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.214399, 51.744668]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "trixter-studios",
+                "title": "Trixter Studios",
+                "color": "#33c377"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2071928, 51.7377367]
             }
         }
     ]

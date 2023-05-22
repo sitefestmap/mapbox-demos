@@ -83,7 +83,7 @@ map.on('load', () => {
                 'source': 'studios',
                 'layout': {
                     'icon-image': `${symbol}`,
-                    'icon-size': 0.9,
+                    'icon-size': 1,
                     'icon-allow-overlap': true,
                     'text-field': ['get', 'title'],
                     'text-font': [

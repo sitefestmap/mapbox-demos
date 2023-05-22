@@ -34,7 +34,7 @@ const studios = [
     {
         studio: `<h2>Bath Road</h2>
         <p>...more info</p>`,
-        color: `${red}`,
+        color: `${mid_blue}`,
         lngLat: [-2.2221152, 51.744348],
     },
     {
