@@ -1,34 +1,76 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Symbol Layers</title>
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+      <!--  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script> -->
         <style>
-            body { margin: 0; padding: 0; display: grid; place-items: center; font-family: monaco; }
-            #map { position: absolute; top: 5rem; bottom: 0; width: 100%; }
-            h1 { text-align: center; }
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
-            .mapboxgl-popup {
-                max-width: 400px;
-                font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            }
+        .filter-group {
+            font: 16px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            border-radius: 3px;
+            width: 120px;
+            color: #fff;
+           
+        }
+
+        .filter-group input[type='checkbox']:first-child + label {
+            border-radius: 3px 3px 0 0;
+        }
+
+        .filter-group label:last-child {
+            border-radius: 0 0 3px 3px;
+            border: none;
+        }
+
+        .filter-group input[type='checkbox'] {
+            display: none;
+        }
+
+        .filter-group input[type='checkbox'] + label {
+          /*  background-color: #3386c0; */
+            background: #333;
+            background-color: #FF330D;
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        }
+
+        .filter-group input[type='checkbox'] + label {
+          /*  background-color: #3386c0; */
+          background: #333;
+          background-color: #FF330D;
+            text-transform: capitalize;
+        }
+
+        .filter-group input[type='checkbox'] + label:hover,
+        .filter-group input[type='checkbox']:checked + label {
+           /* background-color: #4ea0da; */
+           background: #333;
+           background-color: #FF330D;
+        }
+
+        .filter-group input[type='checkbox']:checked + label:before {
+            content: '✔';
+            margin-right: 5px;
+        }
         </style>
     </head>
     <body>
         <main>
-            <h1>Mapbox Demos</h1>
-            <ul>
-                <li><a href="/polygon.html">Polygon Triangle</a></li>
-                <li><a href="/polygon-circle.html">Polygon Circle</a></li>
-                <li><a href="/polygon-square.html">Polygon Square</a></li>
-                <li><a href="/polygon-pentagon.html">Polygon Pentagon</a></li>
-                <li><a href="/colored-markers.html">Colored Markers / Popups</a></li>
-                <li><a href="/polygon-markers-popups.html">Polygon / Colored Markers / Info Popups</a></li>
-                <li><a href="/route-symbol-layers.html">Basic Route Symbol Layers / Colored Icons</a></li>
-                <li>TODO: Polygon with Route Symbol Layers / studio/artist markers/info popups</li>
-                <li>TODO: Checkbox Custom Routes Filter</li>
-            </ul>
+            <div id="map"></div>
+            <nav id="filter-group" class="filter-group"></nav>
         </main>
+        <script src="./scripts/map.js" type="module"></script>
     </body>
 </html>

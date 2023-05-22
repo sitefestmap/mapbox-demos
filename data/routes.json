@@ -1,0 +1,77 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.23, 51.742]
+            },
+            "properties": {
+                "title": "Stroud Town Centre",
+                "icon" : "mapbox-marker-icon-red",
+                "color":  "#f84d4d"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.27, 51.75]
+            },
+            "properties": {
+                "title": "Valley and Vale",
+                "icon" : "mapbox-marker-icon-gray",
+                "color":  "#5b7897"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.185, 51.744]
+            },
+            "properties": {
+                "title": "Bisley",
+                "icon" : "mapbox-marker-icon-blue",
+                "color":  "#4264fb"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.216, 51.77]
+            },
+            "properties": {
+                "title": "Slad Valley",
+                "icon" : "mapbox-marker-icon-orange",
+                "color":  "#f79640"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.16, 51.735]
+            },
+            "properties": {
+                "title": "Golden Valley",
+                "icon" : "mapbox-marker-icon-purple",
+                "color":  "#7753eb"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2, 51.71]
+            },
+            "properties": {
+                "title": "Nailsworth Valley",
+                "icon" : "mapbox-marker-icon-green",
+                "color":  "#33c377"
+            }
+        }
+    ]
+}

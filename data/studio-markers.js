@@ -1,102 +1,3 @@
-import mapboxgl from 'mapbox-gl'; 
-
-mapboxgl.accessToken =
-'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ';
-
-const map = new mapboxgl.Map({
-    container: 'map', // id
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-2.199771, 51.731509],
-    zoom: 10.5,
-});
-
-// TODO : add LARGE markers for 6 routes (no popup)
-/*
-const routes = {
-    'type': 'FeatureCollection',
-    'features': [
-        {
-            'type': 'Feature',
-            'properties': {
-                'description': "Stroud Town Center",
-                'icon': 'theatre'
-            },
-            'geometry': {
-                'type': 'Point',
-                'coordinates': [51.75, -2.22]
-            }
-        },
-    ]
-};
-*/
-
-map.addControl(new mapboxgl.NavigationControl())
-
-map.on('load', () => {
-    // Add a data source containing GeoJSON data.
-    map.addSource('sitefest', {
-        'type': 'geojson',
-        'data': {
-            'type': 'Feature',
-            'geometry': {
-                'type': 'Polygon',
-                'coordinates': [
-                    [
-                        [ -2.31654, 51.76 ], 
-                        [ -2.1, 51.8 ],
-                        [ -2.172, 51.65 ], 
-                        [ -2.31654, 51.76 ],
-                    ]
-                ]
-            }
-        }
-    });
-     
-    // Add a new layer to visualize the polygon.
-    map.addLayer({
-        'id': 'sitefest',
-        'type': 'fill',
-        'source': 'sitefest',
-        'layout': {},
-        'paint': {
-            'fill-color': '#0080ff',
-            'fill-opacity': 0.2
-        }
-    });
-    // Add a black outline around the polygon.
-    map.addLayer({
-        'id': 'outline',
-        'type': 'line',
-        'source': 'sitefest',
-        'layout': {},
-        'paint': {
-            'line-color': '#111',
-            'line-width': 2
-        }
-    });
-
-    /*
-    // ROUTE LABELS
-    map.addSource('places', {
-        'type': 'geojson',
-        'data': places
-    });
-         
-    map.addLayer({
-        'id': 'poi-labels',
-        'type': 'symbol',
-        'source': 'places',
-        'layout': {
-            'text-field': ['get', 'description'],
-            'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
-            'text-radial-offset': 0.5,
-            'text-justify': 'auto',
-            'icon-image': ['get', 'icon']
-        }
-    }); 
-    */
-});
-
 const red       = `hsl(10  70% 50%)`;
 const mid_blue  = `hsl(195 70% 50%)`;
 const dark_blue = `hsl(215 70% 50%)`;
@@ -296,17 +197,6 @@ const studios = [
         color: `${green}`,
         lngLat: [-2.2046, 51.73191],
     },
-  /*  {
-        studio: `<h2>Pegasus Art Shop</h2>`, // London Road
-        color: `${green}`,
-        lngLat: [-2.2046, 51.73191],
-    },
-    {
-        studio: `<h2>Griffin Mill</h2>`, // London Road
-        color: `${green}`,
-        lngLat: [],
-    },
-    */
     {
         studio: `<h2>Polly Lyster</h2>
         <p>...more info</p>`,
@@ -321,14 +211,4 @@ const studios = [
     },
 ]
 
-studios.forEach(({studio, color, lngLat}) => {
-    const popup = new mapboxgl.Popup({ offset: 25}).setHTML(studio) // change to info setHTML
-
-    new mapboxgl.Marker({
-        color: color,
-        scale: 1
-    })
-    .setLngLat(lngLat)
-    .setPopup(popup)
-    .addTo(map)
-})
+export default studios;

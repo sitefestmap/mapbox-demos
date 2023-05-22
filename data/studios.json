@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "john-st-studios",
+                "title": "John St Studios",
+                "color": "#f84d4d"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2167788, 51.7445037]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "marven-st-chloe",
+                "title": "Marven St Chloe",
+                "color": "#33c377"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2185467, 51.7101307]
+            }
+        }
+    ]
+}

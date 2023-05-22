@@ -1,0 +1,77 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.23, 51.742]
+            },
+            "properties": {
+                "title": "Stroud Town Centre",
+                "icon" : "red-marker",
+                "color":  "#832917"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.29, 51.75]
+            },
+            "properties": {
+                "title": "Valley and Vale",
+                "icon" : "gray-marker",
+                "color":  "#176883"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.185, 51.744]
+            },
+            "properties": {
+                "title": "Bisley",
+                "icon" : "blue-marker",
+                "color":  "#174483"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.216, 51.77]
+            },
+            "properties": {
+                "title": "Slad Valley",
+                "icon" : "orange-marker",
+                "color":  "#834d17"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.140133, 51.721]
+            },
+            "properties": {
+                "title": "Golden Valley",
+                "icon" : "purple-marker",
+                "color":  "#5f1783"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-2.2, 51.71]
+            },
+            "properties": {
+                "title": "Nailsworth",
+                "icon" : "green-marker",
+                "color":  "#17834d"
+            }
+        }
+    ]
+}
