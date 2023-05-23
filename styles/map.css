@@ -26,7 +26,7 @@ body {
     z-index: 1;
     height: 100%;
     width: 10rem;
-    overflow-y: scroll !important;
+    overflow-y: scroll;
     border-radius: 3px;
     color: var(--text);
     word-wrap: break-word;
