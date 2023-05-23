@@ -1,3 +1,18 @@
+/**
+    * @TODO
+    * Numbered Icons for 5 Areas
+        * Mapnik lib doesn't allow svg text elements 
+    * generate Directions for checked layers
+        * @link https://docs.mapbox.com/playground/directions
+    * Layer popups with info about artists at a studio
+    * Rename icons
+    * Choose polygon shape, opacity, then check color contrast
+    * Move into 2 page setup
+    * if tricky, could change to 1 page App ( Map below slideshow )
+    * Integrate into the main app
+    * Make sveltekit version for fun
+*/
+
 import mapboxgl from 'mapbox-gl';
 
 // import polygon from '/data/polygons/pentagon.json' assert { type: 'json' };
@@ -14,9 +29,11 @@ const filterGroup = document.getElementById('filter-group');
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/matthiasweston/clhuty4u3020p01r0f1wb6lwo',
-    center: [-2.2167788, 51.7445037],
+    center: [-2.181235, 51.736333],
     zoom: 11.15
 });
+
+map.addControl(new mapboxgl.NavigationControl());
 
 map.on('load', () => {
     map.addSource('studios', {
@@ -92,7 +109,7 @@ map.on('load', () => {
                     ],
                     'text-offset': [0, 1],
                     'text-anchor': 'top',
-                    'text-size': 15
+                    'text-size': 16
                 },
                 'paint': {
                     'text-color': ['get', 'color']
@@ -126,12 +143,12 @@ map.on('load', () => {
 });
 
 
-/*
-    * Make Layers Empty
-    * check boxes to add layers
-    * generate Directions
-        * https://docs.mapbox.com/playground/directions/
-*/
+
+
+
+
+
+
 
 
 
