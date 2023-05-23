@@ -1,19 +1,28 @@
 /**
     * @TODO
     * Numbered Icons for 5 Areas
-        * Mapnik lib doesn't allow svg text elements 
+        * Note : Mapnik lib doesn't allow svg <text> elements 
     * generate Directions for checked layers
         * @link https://docs.mapbox.com/playground/directions
+        * Directions API 100000 free requests per month
+        * Geocoding API sets start/end points
+        * 
     * Layer popups with info about artists at a studio
     * Rename icons
     * Choose polygon shape, opacity, then check color contrast
     * Move into 2 page setup
     * if tricky, could change to 1 page App ( Map below slideshow )
+    * Map Style
     * Integrate into the main app
+    * If go over free tier, make new account and reupload svgs
+        * (For this purpose, Datasets have been written in the repo rather than in the mapbox studio) 
     * Make sveltekit version for fun
 */
 
 import mapboxgl from 'mapbox-gl';
+
+// Sort dep error
+// import MapboxDirections from 'mapbox/mapbox-gl-directions';
 
 // import polygon from '/data/polygons/pentagon.json' assert { type: 'json' };
 import polygon from '/data/polygons/triangle.json' assert { type: 'json' };
@@ -33,7 +42,32 @@ const map = new mapboxgl.Map({
     zoom: 11.15
 });
 
-map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+
+map.addControl(
+    new mapboxgl.GeolocateControl({
+        positionOptions: {
+            // max zoom
+            // enableHighAccuracy: true
+        },
+        fitBoundsOptions: {
+            maxZoom: 12 // edit this
+        },
+        trackUserLocation: true,
+        showUserHeading: true
+    }),
+    'top-left'
+);
+
+/*
+map.addControl(
+    new MapboxDirections({
+        accessToken: mapboxgl.accessToken,
+        coordinates: 5
+    }),
+    'top-left'
+);
+*/
 
 map.on('load', () => {
     map.addSource('studios', {
