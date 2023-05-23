@@ -97,13 +97,16 @@ map.on('load', () => {
                 'paint': {
                     'text-color': ['get', 'color']
                 },
-                'filter': ['==', 'icon', symbol]
+               'filter': ['==', 'icon', symbol]
+               //'filter': ['null', '']
             });
+
+            map.setLayoutProperty(layerID, 'visibility', 'none');
 
             const input = document.createElement('input');
             input.type = 'checkbox';
             input.id = layerID;
-            input.checked = true;
+            input.checked = false;
             filterGroup.appendChild(input);
 
             const label = document.createElement('label');
@@ -121,6 +124,18 @@ map.on('load', () => {
         }
     }
 });
+
+
+/*
+    * Make Layers Empty
+    * check boxes to add layers
+    * generate Directions
+        * https://docs.mapbox.com/playground/directions/
+*/
+
+
+
+
 
 
 /*
