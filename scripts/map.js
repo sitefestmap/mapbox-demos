@@ -35,6 +35,7 @@ import studios from '/data/studios.json' assert { type: 'json' };
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ';
 
 const filterGroup = document.getElementById('filter-group');
+
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/matthiasweston/clhuty4u3020p01r0f1wb6lwo',
@@ -42,38 +43,45 @@ const map = new mapboxgl.Map({
     zoom: 11.15
 });
 
-map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-
-map.addControl(
-    new mapboxgl.GeolocateControl({
-        positionOptions: {
-            // max zoom
-            // enableHighAccuracy: true
-        },
-        fitBoundsOptions: {
-            maxZoom: 12 // edit this
-        },
-        trackUserLocation: true,
-        showUserHeading: true
-    }),
-    'top-left'
-);
-
-/*
-map.addControl(
-    new MapboxDirections({
-        accessToken: mapboxgl.accessToken,
-        coordinates: 5
-    }),
-    'top-left'
-);
-*/
-
 map.on('load', () => {
+    map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+
+    /**
+     * @note Directions API : request up to 25 waypoints only
+     */
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                // max zoom
+                // enableHighAccuracy: true
+            },
+            fitBoundsOptions: {
+                maxZoom: 12 // edit this
+            },
+            trackUserLocation: true,
+            showUserHeading: true,
+        }),
+        'top-left'
+    );
+
+    const directions = map.addControl(
+        new MapboxDirections({
+            accessToken: mapboxgl.accessToken,
+            coordinates: 5, //?
+            profile: 'mapbox/driving',
+            controls: {
+                instructions: false,
+                inputs: false
+            }
+        }),
+        'top-left'
+    );
+
     map.addSource('studios', {
         'type': 'geojson',
         'data': studios
     });
+
     map.addSource('polygon', {
         'type': 'geojson',
         'data': polygon
@@ -98,6 +106,7 @@ map.on('load', () => {
             'line-width': 1
         }
     });
+
     map.addSource('routes', {
         'type': 'geojson',
         'data': routes
@@ -116,7 +125,7 @@ map.on('load', () => {
             ],
             'text-offset': [0, 0.5],
             'text-anchor': 'top',
-            'text-size': 20
+            'text-size': 24
         },
         'paint': {
             'text-color': ['get', 'color']
@@ -143,7 +152,7 @@ map.on('load', () => {
                     ],
                     'text-offset': [0, 1],
                     'text-anchor': 'top',
-                    'text-size': 16
+                    'text-size': 18
                 },
                 'paint': {
                     'text-color': ['get', 'color']
@@ -171,6 +180,18 @@ map.on('load', () => {
                     'visibility',
                     e.target.checked ? 'visible' : 'none'
                 );
+                directions.addWaypoint(layerID)
+           
+             //  MapboxDirections.addWaypoint(layerID)
+            // directions.setOrigin(layerID)  
+            //directions.setOrigin([-2.181235, 51.736333]) 
+           // directions.setOrigin(layerID)
+           // directions.setDestination(layerID),
+           // directions.setOrigin([-2.181235, 51.736333])
+           // directions.setDestination([-2.181235, 51.736333])
+                
+
+                // disable onClick addWaypoint?
             });
         }
     }
