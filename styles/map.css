@@ -21,7 +21,7 @@ body {
     font: 1rem var(--fontstack);
     font-weight: 600;
     position: absolute;
-    top: 7rem;
+    top: 0;
     right: .5rem;
     z-index: 1;
     height: 100%;
