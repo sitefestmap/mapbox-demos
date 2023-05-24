@@ -1,11 +1,8 @@
-/**
- * @TODO
-    * @message : 'You need to allow location'
-    * @markers : bath rd / bath rd 135 icons not showing
-    * @waypoints : get waypoints from added layerIDs
- */
-
 import mapboxgl from 'mapbox-gl';
+
+
+const mapboxSDK = require('mapbox/mapbox-sdk/services/directions');
+//const directionsService = mapboxSDK({ accessToken: `${mapboxgl.accessToken}` });
 
 // Sort dep error
 // import MapboxDirections from 'mapbox/mapbox-gl-directions';
@@ -18,7 +15,7 @@ import polygon from '/data/polygons/triangle.json' assert { type: 'json' };
 import routes from '/data/routes.json' assert { type: 'json' };
 import studios from '/data/studios.json' assert { type: 'json' };
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ';
+//mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ';
 
 const filterGroup = document.getElementById('filter-group');
 
@@ -29,24 +26,55 @@ const map = new mapboxgl.Map({
     zoom: 11.15
 });
 
-/*
-// Send the request to Mapbox
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    // Extract the route geometry and instructions
-    const routeGeometry = data.routes[0].geometry;
 
-    // Print the route geometry and instructions
-    console.log(`Route Geometry: ${routeGeometry}`);
-    console.log("Route Instructions:");
-  })
-  .catch(error => {
-    console.error('Error:', error);
+//////////////////////////////////////////////////////////////
+/*
+
+const coordinates = [
+    [-2.181235, 51.736333], // Example starting point
+    [-2.181235, 51.736333], // Example destination
+  ];
+
+// Make sure each layer has a unique `id` assigned to it.
+const layerIds = [
+    'layer1', 
+    'layer2', 
+    'layer3'
+]; // Example layer IDs
+
+// request directions
+directionsService
+     .getDirections({
+       waypoints: coordinates,
+       geometries: 'geojson',
+     })
+     .send()
+     .then(response => {
+       const directions = response.body;
+
+// Iterate over each layer ID and add directions to the respective layer
+layerIds.forEach(layerId => {
+    // Assuming you have already added the layer to the map
+    const layer = map.getLayer(layerId);
+    
+    // Apply directions to the layer
+    map.setFeatureState(
+      { source: layer.source, sourceLayer: layer.sourceLayer },
+      { direction: directions },
+    );
   });
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+
 */
+//////////////////////////////////////////////////////////////
+
+
 
 map.on('load', () => {
+
     map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
     /**
@@ -67,36 +95,25 @@ map.on('load', () => {
         'top-left'
     );
 
-    const directions =
-        new MapboxDirections({
-            accessToken: mapboxgl.accessToken,
-            unit: 'metric',
-           
-            // coordinates: 
-            profile: 'mapbox/driving',
-            controls: {
-                instructions: false,
-                inputs: false,
-               
-            },
-            // interactive: false
-        });
-   
-       /* directions.setRouteStyle({
-            // routeIndex: 0,
-             strokeColor: 'red',
-             strokeWidth: 4
-         })
-        */
-
-    map.addControl(directions,
-        'top-left'
-    );
+   // const directions =
+        map.addControl(
+            new MapboxDirections({
+                accessToken: mapboxgl.accessToken,
+                // coordinates: 
+                profile: 'mapbox/driving',
+                controls: {
+                    instructions: false,
+                    inputs: false
+                }
+            }),
+            'top-left'    
+        );
 
     map.addSource('studios', {
         'type': 'geojson',
         'data': studios
     });
+
     map.addSource('polygon', {
         'type': 'geojson',
         'data': polygon
@@ -121,6 +138,7 @@ map.on('load', () => {
             'line-width': 1
         }
     });
+
     map.addSource('routes', {
         'type': 'geojson',
         'data': routes
@@ -148,8 +166,6 @@ map.on('load', () => {
    
     for (const feature of studios.features) {
         const symbol = feature.properties.icon;
-        const waypoint = feature.properties.coordinates;
-    
         const layerID = `poi-${symbol}`;
 
         if (!map.getLayer(layerID)) {
@@ -188,57 +204,40 @@ map.on('load', () => {
             label.setAttribute('for', layerID);
             label.textContent = symbol;
             filterGroup.appendChild(label);
-            
-            // wrap in event listener that is triggered when users location is available
-            // Get the user's location with geolocation API
-            navigator.geolocation.getCurrentPosition(function(position) {
-                var userLongitude = position.coords.longitude;
-                var userLatitude = position.coords.latitude;
-        
-                // set origin and destination to user location
-                // set it to original location, don't track it / update it
-                directions.setOrigin([userLongitude, userLatitude]);
-                directions.setDestination([userLongitude, userLatitude]);
-                directions.query();
-            })
 
             input.addEventListener('change', (e) => {
                 map.setLayoutProperty(
                     layerID,
                     'visibility',
                     e.target.checked ? 'visible' : 'none',
-                  
                 );
-                // uncaught type error: waypoint is undefined
-                directions.addWaypoint(0, waypoint);
-                directions.query();
-            });
 
-               /* function getElementByCheckedTrue() {
-                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-                    for ( var i = 0; i < checkboxes.length; i++) {
-                        if (checkboxes[i].checked)
-                        {
-                            return checkboxes[i]
-                        }
-                        return null;
-                    }
-                }
-                var waypoint = getElementByCheckedTrue()
-                if (waypoint) {
-                    directions.addWaypoint(0, layerID);
-                }
-                else {
-                    return null;
-                } */
-           
+                /*
+
+                add waypoints like: https://docs.mapbox.com/playground/directions/
+
+                const query = await fetch(
+                    `https://api.mapbox.com/directions/v5/mapbox/driving/${layerID}?alternatives=true&geometries=geojson&language=en&overview=simplified&steps=true&access_token=pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ`,
+                    { method: 'GET'}
+                );
+                const json = await query.json()
+
+                */
+
+                
+                // Call Directions API each time a layerID is added
+                // coordinate pairs seperated by colon
+                // const url = ''
+
+                // directions.setOrigin(layerID)
+                // directions.setDestination(layerID);
+                // directions.setWaypoint(layerID)
+               
+                // https://mapbox-gl-path.netlify.app
+
+                // make requests with SDK
+                // https://github.com/mapbox/mapbox-sdk-js
+            });
         }
     }
-    /*
-            directions.on('route', function(e) {
-            var routes = e.route;
-                // route event listener recieves array of route objects
-                // each object contains info such as distance, duration, geometry
-        })
-    */
 });

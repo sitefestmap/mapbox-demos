@@ -64,7 +64,7 @@
         {
             "type": "Feature",
             "properties": {
-                "icon": "bath-road",
+                "icon": "bath-rd",
                 "title": "135 Bath Road",
                 "color": "#4264fb"
             },
@@ -79,7 +79,7 @@
         {
             "type": "Feature",
             "properties": {
-                "icon": "bath-road-143",
+                "icon": "bath-rd-143",
                 "title": "143 Bath Road",
                 "color": "#4264fb"
             },
