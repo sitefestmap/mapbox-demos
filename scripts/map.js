@@ -3,6 +3,7 @@
     * @message : 'You need to allow location'
     * @markers : bath rd / bath rd 135 icons not showing
     * @waypoints : get waypoints from added layerIDs
+    * @popups : add artist info for each studio
  */
 
 import mapboxgl from 'mapbox-gl';
@@ -210,7 +211,9 @@ map.on('load', () => {
                   
                 );
                 // uncaught type error: waypoint is undefined
-                directions.addWaypoint(0, waypoint);
+                // directions.addWaypoint(0, waypoint);
+                // Test : John St Studios
+                directions.addWaypoint(0, [-2.2167788, 51.7445037]);
                 directions.query();
             });
 
