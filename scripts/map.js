@@ -75,20 +75,13 @@ map.on('load', () => {
            
             // coordinates: 
             profile: 'mapbox/driving',
+            alternatives: false,
             controls: {
                 instructions: false,
                 inputs: false,
-               
             },
-            // interactive: false
+            interactive: false
         });
-   
-       /* directions.setRouteStyle({
-            // routeIndex: 0,
-             strokeColor: 'red',
-             strokeWidth: 4
-         })
-        */
 
     map.addControl(directions,
         'top-left'
@@ -149,8 +142,7 @@ map.on('load', () => {
    
     for (const feature of studios.features) {
         const symbol = feature.properties.icon;
-        const waypoint = feature.properties.coordinates;
-    
+        const waypoint = feature.geometry.coordinates;
         const layerID = `poi-${symbol}`;
 
         if (!map.getLayer(layerID)) {
@@ -189,59 +181,21 @@ map.on('load', () => {
             label.setAttribute('for', layerID);
             label.textContent = symbol;
             filterGroup.appendChild(label);
-            
-            // wrap in event listener that is triggered when users location is available
-            // Get the user's location with geolocation API
+           
             navigator.geolocation.getCurrentPosition(function(position) {
                 var userLongitude = position.coords.longitude;
                 var userLatitude = position.coords.latitude;
-        
-                // set origin and destination to user location
-                // set it to original location, don't track it / update it
                 directions.setOrigin([userLongitude, userLatitude]);
                 directions.setDestination([userLongitude, userLatitude]);
-                directions.query();
             })
-
             input.addEventListener('change', (e) => {
                 map.setLayoutProperty(
                     layerID,
                     'visibility',
                     e.target.checked ? 'visible' : 'none',
-                  
                 );
-                // uncaught type error: waypoint is undefined
-                // directions.addWaypoint(0, waypoint);
-                // Test : John St Studios
-                directions.addWaypoint(0, [-2.2167788, 51.7445037]);
-                directions.query();
+                directions.addWaypoint(0, waypoint);
             });
-
-               /* function getElementByCheckedTrue() {
-                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-                    for ( var i = 0; i < checkboxes.length; i++) {
-                        if (checkboxes[i].checked)
-                        {
-                            return checkboxes[i]
-                        }
-                        return null;
-                    }
-                }
-                var waypoint = getElementByCheckedTrue()
-                if (waypoint) {
-                    directions.addWaypoint(0, layerID);
-                }
-                else {
-                    return null;
-                } */
-           
         }
     }
-    /*
-            directions.on('route', function(e) {
-            var routes = e.route;
-                // route event listener recieves array of route objects
-                // each object contains info such as distance, duration, geometry
-        })
-    */
 });
