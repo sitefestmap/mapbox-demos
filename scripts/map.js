@@ -69,7 +69,7 @@ map.on('load', () => {
                 // enableHighAccuracy: true
             },
             fitBoundsOptions: {
-                maxZoom: 13 // edit this
+                maxZoom: 12 // edit this
             },
             trackUserLocation: true,
             showUserHeading: true,
@@ -210,16 +210,16 @@ map.on('load', () => {
                 'layout': {
                     'icon-image': `${symbol}`,
                     'icon-size': 0.9,
-                   // 'icon-allow-overlap': true,
-                   // 'text-allow-overlap': true,
+                    'icon-allow-overlap': true,
+                    'text-allow-overlap': true,
                     'text-field': ['get', 'title'],
                     'text-font': [
                         'Open Sans Semibold',
                         'Arial Unicode MS Bold'
                     ],
-                    'text-offset': [0, 1],
+                    'text-offset': [0, 0.2],
                     'text-anchor': 'top',
-                    'text-size': 18
+                    'text-size': 17
                 },
                 'paint': {
                     //'text-color': ['get', 'color'],
