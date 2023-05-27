@@ -3,6 +3,9 @@
     --text: hsl(0 0% 95%);
     --border: rgba(0, 0, 0, 0.25);
     --fontstack: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    --border-radius: 4px;
+    --red : hsl(10 70% 50%); /* #f84d4d */
+    --text: hsl(0 0% 95%);
 }
 
 body { 
@@ -15,6 +18,12 @@ body {
     top: 0; 
     bottom: 0; 
     width: 100%; 
+}
+
+.mapboxgl-popup-content {
+    color: var(--text);
+    background-color: var(--red);
+    border-radius: var(--border-radius);
 }
 
 .filter-group {

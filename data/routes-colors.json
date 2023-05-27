@@ -10,7 +10,7 @@
             "properties": {
                 "title": "Stroud Town Centre",
                 "icon" : "mapbox-marker-icon-red",
-                "color":  "#fff"
+                "color":  "#f84d4d"
             }
         },
         {
@@ -22,7 +22,7 @@
             "properties": {
                 "title": "Valley and Vale",
                 "icon" : "mapbox-marker-icon-gray",
-                "color":  "#fff"
+                "color":  "#40546a"
             }
         },
         {
@@ -34,7 +34,7 @@
             "properties": {
                 "title": "Bisley",
                 "icon" : "mapbox-marker-icon-purple",
-                "color":  "#fff"
+                "color":  "#7753eb"
             }
         },
         {
@@ -46,7 +46,7 @@
             "properties": {
                 "title": "Slad Valley",
                 "icon" : "mapbox-marker-icon-orange",
-                "color":  "#fff"
+                "color":  "#f79640"
             }
         },
         {
@@ -58,7 +58,7 @@
             "properties": {
                 "title": "Golden Valley",
                 "icon" : "mapbox-marker-icon-green",
-                "color":  "#fff"
+                "color":  "#207a4b"
             }
         },
         {
@@ -70,7 +70,7 @@
             "properties": {
                 "title": "Nailsworth Valley",
                 "icon" : "mapbox-marker-icon-blue",
-                "color":  "#fff"
+                "color":  "#4264fb"
             }
         }
     ]
