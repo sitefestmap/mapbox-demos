@@ -12,8 +12,7 @@ const dark_purple = '#371998';
 const dark_green = '#0a6937';
 const dark_mid_blue = '#142fa4'
 
-const routes =
-{
+const routes = {
     "type": "FeatureCollection",
     "features": [
         {

@@ -1,4 +1,3 @@
-
 const center_bottom = [-2.217850418218603, 51.74117023834362];
 const center_bottom_left = [-2.223084174810481, 51.745370277385945];
 const center_top_left = [-2.220203207878683, 51.74711993736873];
@@ -23,7 +22,7 @@ const multi_polygon = {
     features: [
         {
             type: 'Feature',
-            properties: { color: red},
+            properties: { color: red },
             geometry: {
                 type: 'Polygon',
                 coordinates: [ // 1 Town Center
@@ -40,7 +39,7 @@ const multi_polygon = {
         },
         {   // 2 Nailsworth
             type: 'Feature',
-            properties: { color: mid_blue},
+            properties: { color: mid_blue },
             geometry: {
                 type: 'Polygon',
                 coordinates: [
@@ -56,7 +55,7 @@ const multi_polygon = {
         },
         {  // 3 Vale
             type: 'Feature',
-            properties: { color: blue},
+            properties: { color: blue },
             geometry: {
                 type: 'Polygon',
                 coordinates: [
@@ -107,7 +106,7 @@ const multi_polygon = {
         {
             // 6 Golden Valley
             type: 'Feature',
-            properties: { color: green},
+            properties: { color: green },
             geometry: {
                 type: 'Polygon',
                 coordinates: [

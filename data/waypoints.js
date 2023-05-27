@@ -1,18 +1,9 @@
-/**
- * @TODO
-   * currently here : 33 studios
- * @notes
-   * trickster house and trickster studio combined?
-   * may and mark derbyshire combined
- */
-
 // 1 TOWN CENTRE (RED)
 export const john_st = [-2.2167788, 51.7445037];
 export const weven = [-2.21798684, 51.74506395];
 export const cacao_circle = [-2.2170453, 51.7451129];
 export const high_st = [-2.21523121, 51.7451931];
 export const bath_rd = [-2.2221152, 51.744348]; // delete
-
 export const bath_rd_135 = [-2.23056, 51.73933];
 export const bath_rd_143 = [-2.23069, 51.73922];
 

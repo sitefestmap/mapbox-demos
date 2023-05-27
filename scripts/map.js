@@ -1,10 +1,7 @@
 /**
  * @TODO
-    * @message : 'You need to allow location'
-    * @markers : bath rd / bath rd 135 icons not showing
-    * @waypoints : get waypoints from added layerIDs
-    * @popups : add artist info for each studio
-    * @checkboxes : slides are checking all artists / need to change to studios instead?
+    * popups : add artist info for each studio.
+    * checkboxes : event listeners to add initial artist checkboxes into studio checkboxes.
  */
 
 import mapboxgl from 'mapbox-gl';
@@ -12,22 +9,12 @@ import mapboxgl from 'mapbox-gl';
 // Sort dep error
 // import MapboxDirections from 'mapbox/mapbox-gl-directions';
 
-// Color coded areas
-import multi_polygon from '../data/polygons/multipolygon.js';
-
-// Dynamic Symbols Layer (Icons + Text)
-import studios from '../data/studios.js'
-
-// Static initial markers
+import multi_polygon from '../data/multipolygon.js';
+import studios from '../data/studios.js';
 import studio_markers from '../data/studio-markers.js';
+import routes from '../data/routes.js';
+import styles from './styles.js';
 
-// Route Labels - Needs Numbered Icons
-import routes from '/data/routes.js'
-
-// For custom route color /
-import styles from '/scripts/styles.js'
-
-// Initial Mapbox Setup
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ';
 
 const map = new mapboxgl.Map({
@@ -37,12 +24,10 @@ const map = new mapboxgl.Map({
     zoom: 11.5
 });
 
-// Demo Checkboxes
 const filterGroup = document.getElementById('filter-group');
 
-// Initial markers for all studios
 studio_markers.forEach(({studio, color, lngLat}) => {
-    const popup = new mapboxgl.Popup({ offset: 25,}).setHTML(studio) // change to info setHTML
+    const popup = new mapboxgl.Popup({ offset: 25,}).setHTML(studio)
 
     new mapboxgl.Marker({
         color: color,
@@ -51,17 +36,13 @@ studio_markers.forEach(({studio, color, lngLat}) => {
     .setLngLat(lngLat)
     .setPopup(popup)
     .addTo(map)
-
-   /* add Listeners for hover? */
+    // add Listeners for hover?
 })
 
 map.on('load', () => {
     map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-    //map.setPaintProperty('routes', 'line-width', 3);
-   
-    /**
-     * @note Directions API : request up to 25 waypoints only
-     */
+
+    // @note Directions API : request up to 25 waypoints only
     map.addControl(
         new mapboxgl.GeolocateControl({
             positionOptions: {
@@ -97,7 +78,6 @@ map.on('load', () => {
         'top-left'
     );
 
-    /* MULTIPOLYGON */
     map.addSource('multi_polygon', {
         type: 'geojson',
         data: multi_polygon
@@ -127,11 +107,7 @@ map.on('load', () => {
             'line-width': 2
         }
     });
-
-    /**
-     * @Routes (5 Valleys)
-     */
-
+   
     map.addSource('routes', {
         'type': 'geojson',
         'data': routes
@@ -142,7 +118,7 @@ map.on('load', () => {
         'source': 'routes',
         'layout': {
             // 'icon-image': ['get', 'icon'],
-           // 'icon-size': 1.1,
+            // 'icon-size': 1.1,
             'text-field': ['get', 'title'],
             'icon-allow-overlap': true,
             'text-allow-overlap': true,
@@ -158,11 +134,6 @@ map.on('load', () => {
             'text-color': ['get', 'color']
         }
     });
-    
-
-    /**
-     * @studios
-     */
 
     map.addSource('studios', {
         'type': 'geojson',
@@ -196,15 +167,12 @@ map.on('load', () => {
                 'paint': {
                     // 'text-color': ['get', 'color'],
                     'text-color': '#111'
-                   
                 },
                'filter': ['==', 'icon', symbol]
             });
 
-            // Start with no dynamic layers on map
             map.setLayoutProperty(layerID, 'visibility', 'none');
 
-            // Create checkboxes for layers
             const input = document.createElement('input');
             input.type = 'checkbox';
             input.id = layerID;
@@ -216,51 +184,32 @@ map.on('load', () => {
             label.textContent = symbol;
             filterGroup.appendChild(label);
            
-            // Set User location as origin / destination
             navigator.geolocation.getCurrentPosition(function(position) {
                 var userLongitude = position.coords.longitude;
                 var userLatitude = position.coords.latitude;
                 directions.setOrigin([userLongitude, userLatitude]);
                 directions.setDestination([userLongitude, userLatitude]);
             })
-
-            /**
-             * Custom Route Colour
-             */
-
-             // Listen to the `route` event
-             directions.on('route', function() {
+            
+            directions.on('route', function() {
                 var routeColor = '#f84d4d';
                 var routeColor = '#ff6868';
                 var routeOutlineColor = '#111';
-                // Access the route layer and update its paint properties
                 map.setPaintProperty('directions-route-line', 'line-color', routeColor, 'line-width', 8);
                 map.setPaintProperty('directions-route-line-alt', 'line-color', routeOutlineColor);                
             });
 
-            // If want to add waypoint but don't remove on uncheck
-           /* input.addEventListener('change', (e) => {
-                map.setLayoutProperty(
-                    layerID,
-                    'visibility',
-                    // on change check if checked and return visible or none
-                    e.target.checked ? 'visible' : 'none'
-                );
-                directions.addWaypoint(0, waypoint)
-            });
-            */
-           
-            // Add / remove waypoints
-           input.addEventListener('change', (e) => {
-               if (e.target.checked) {
+            input.addEventListener('change', (e) => {
+                if (e.target.checked) {
                    map.setLayoutProperty(layerID, 'visibility', 'visible');
                    directions.addWaypoint(0, waypoint);
-               } else {
+                } else {
                    map.setLayoutProperty(layerID, 'visibility', 'none')
                    directions.removeWaypoint(0);
-               }
-           })
+                }
+            })
+
+            // TODO:  Event listeners to add artist checkboxes to related studio checkbox
         }
     }
 });
-
