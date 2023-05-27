@@ -1,60 +1,39 @@
-const dark_red = '#7e0000'; // hsl 0 100 25
-const dark_mid_blue = '#03197b';
-const dark_blue = '#303f50';
-const dark_orange = '#7e3e05';
-const dark_purple = '#250d72';
-const dark_green = '#1a663e'
+import * as waypoints from './waypoints.js';
 
 const studios = {
     "type": "FeatureCollection",
-    
     "features": [
         {
             "type": "Feature",
             "properties": {
                 "icon": "john-st-studios",
-                "title": "John St Studios",
-                "color": dark_red,
-                "line-color": "red"
+                "title": "John St Studios"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2167788,
-                    51.7445037
-                ]
+                "coordinates": waypoints.john_st
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "weven",
-                "title": "Weven",
-                "color": dark_red,
-                "line-color": "red"
+                "title": "Weven"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.21798684,
-                    51.74506395
-                ]
+                "coordinates": waypoints.weven
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "cacao-circle",
-                "title": "Cacao Circle",
-                "color": dark_red,
-                "line-color": "red"
+                "title": "Cacao Circle"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2170453,
-                    51.7451129
-                ]
+                "coordinates": waypoints.cacao_circle                 
             }
         },
         {
@@ -62,15 +41,11 @@ const studios = {
             "properties": {
                 "icon": "high-st",
                 "title": "High St",
-                "color": dark_red,
-                "line-color": "red"
+                "color": "#111"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.21523121,
-                    51.7451931
-                ]
+                "coordinates": waypoints.high_st
             }
         },
         {
@@ -78,63 +53,43 @@ const studios = {
             "properties": {
                 "icon": "bath-rd",
                 "title": "135 Bath Road",
-                "color": dark_mid_blue,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.23056,
-                    51.73933
-                ]
+                "coordinates": waypoints.bath_rd_135
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "bath-rd-143",
-                "title": "143 Bath Road",
-                "color": dark_mid_blue,
-                "line-color": "red"
+                "title": "143 Bath Road"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.23069,
-                    51.73922
-                ]
+                "coordinates": waypoints.bath_rd_143
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "marven-st-chloe",
-                "title": "Marven St Chloe",
-                "color": dark_mid_blue,
-                "line-color": "red"
+                "title": "Marven St Chloe"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2185467,
-                    51.7101307
-                ]
+                "coordinates": waypoints.marven_st_chloe
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "frogmarsh",
-                "title": "Frogmarsh Mill",
-                "color": dark_mid_blue,
-                "line-color": "red"
+                "title": "Frogmarsh Mill"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2325759,
-                    51.7154552
-                ]
+                "coordinates": waypoints.frogmarsh_mill
             }
         },
         {
@@ -142,15 +97,10 @@ const studios = {
             "properties": {
                 "icon": "article",
                 "title": "Article Studio",
-                "color": dark_mid_blue,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2279565,
-                    51.7085009
-                ]
+                "coordinates": waypoints.article_studio
             }
         },
         {
@@ -158,15 +108,10 @@ const studios = {
             "properties": {
                 "icon": "the-hide",
                 "title": "The Hide",
-                "color": dark_mid_blue,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2190762,
-                    51.7071444
-                ]
+                "coordinates": waypoints.the_hide
             }
         },
         {
@@ -174,15 +119,10 @@ const studios = {
             "properties": {
                 "icon": "nutshell",
                 "title": "The Nutshell Studios",
-                "color": dark_mid_blue,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2191816,
-                    51.695219
-                ]
+                "coordinates": waypoints.nutshell_studios
             }
         },
         {
@@ -190,15 +130,10 @@ const studios = {
             "properties": {
                 "icon": "three-storeys",
                 "title": "Three Storeys",
-                "color": dark_mid_blue,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.220,
-                    51.692
-                ]
+                "coordinates": waypoints.three_storeys
             }
         },
         {
@@ -206,15 +141,10 @@ const studios = {
             "properties": {
                 "icon": "museum-in-the-park",
                 "title": "Walled Garden Pop-up Studio",
-                "color": dark_blue,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.22542,
-                    51.7506206
-                ]
+                "coordinates": waypoints.walled_garden
             }
         },
         {
@@ -222,15 +152,10 @@ const studios = {
             "properties": {
                 "icon": "studio-tuft",
                 "title": "Studio Tuft",
-                "color": dark_blue,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2809237,
-                    51.7460296
-                ]
+                "coordinates": waypoints.studio_tuft
             }
         },
         {
@@ -238,15 +163,10 @@ const studios = {
             "properties": {
                 "icon": "houseworkwork",
                 "title": "Houseworkwork",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.21443438,
-                    51.7465302
-                ]
+                "coordinates": waypoints.houseworkwork
             }
         },
         {
@@ -254,31 +174,32 @@ const studios = {
             "properties": {
                 "icon": "landsdown-hall",
                 "title": "LandsdownHall",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2165839,
-                    51.7463608
-                ]
+                "coordinates": waypoints.landsdown_hall
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "may-derbyshire",
-                "title": "May / Mark Derbyshire",
-                "color": dark_orange,
-                "line-color": "red"
+                "title": "May Derbyshire",
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.214580,
-                    51.747230
-                ]
+                "coordinates": waypoints.may_derbyshire
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "icon": "mark-derbyshire",
+                "title": "Mark Derbyshire",
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": waypoints.mark_derbyshire
             }
         },
         {
@@ -286,15 +207,10 @@ const studios = {
             "properties": {
                 "icon": "jack-duplock",
                 "title": "Jack Duplock",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.214570,
-                    51.746980
-                ]
+                "coordinates": waypoints.jack_duplop
             }
         },
         {
@@ -302,15 +218,10 @@ const studios = {
             "properties": {
                 "icon": "stroud-pottery",
                 "title": "Stroud Pottery",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2157922,
-                    51.7472264
-                ]
+                "coordinates": waypoints.stroud_pottery
             }
         },
         {
@@ -318,15 +229,10 @@ const studios = {
             "properties": {
                 "icon": "lucy-inder",
                 "title": "Lucy Inder",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2165653,
-                    51.7487422
-                ]
+                "coordinates": waypoints.lucy_inder
             }
         },
         {
@@ -334,15 +240,10 @@ const studios = {
             "properties": {
                 "icon": "sam-marsh",
                 "title": "Sam Marsh",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2121959,
-                    51.7504326
-                ]
+                "coordinates": waypoints.sam_marsh
             }
         },
         {
@@ -350,15 +251,10 @@ const studios = {
             "properties": {
                 "icon": "andy-bradley",
                 "title": "Andy Bradley",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.20618,
-                    51.75065
-                ]
+                "coordinates": waypoints.andy_bradley
             }
         },
         {
@@ -366,15 +262,10 @@ const studios = {
             "properties": {
                 "icon": "hawkwood",
                 "title": "Hawkwood CFT",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.209216,
-                    51.757352
-                ]
+                "coordinates": waypoints.hawkwood
             }
         },
         {
@@ -382,15 +273,10 @@ const studios = {
             "properties": {
                 "icon": "the-camp",
                 "title": "The Camp",
-                "color": dark_orange,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.1268,
-                    51.782792
-                ]
+                "coordinates": waypoints.the_camp
             }
         },
         {
@@ -398,15 +284,10 @@ const studios = {
             "properties": {
                 "icon": "studio-3",
                 "title": "Studio 3",
-                "color": dark_purple,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.214399,
-                    51.744668
-                ]
+                "coordinates": waypoints.studio_3
             }
         },
         {
@@ -414,15 +295,10 @@ const studios = {
             "properties": {
                 "icon": "melvyn-warren-smith",
                 "title": "Melvyn Warren Smith",
-                "color": dark_purple,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.21411838,
-                    51.74450015
-                ]
+                "coordinates": waypoints.melvyn_warren_smith
             }
         },
         {
@@ -430,15 +306,10 @@ const studios = {
             "properties": {
                 "icon": "kath-williams",
                 "title": "Kath Williams",
-                "color": dark_purple,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.21247244,
-                    51.7440431
-                ]
+                "coordinates": waypoints.kath_williams
             }
         },
         {
@@ -446,15 +317,10 @@ const studios = {
             "properties": {
                 "icon": "lower-st",
                 "title": "Lower St",
-                "color": dark_purple,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2103256,
-                    51.7431577
-                ]
+                "coordinates": waypoints.lower_st
             }
         },
         {
@@ -462,15 +328,10 @@ const studios = {
             "properties": {
                 "icon": "11-horns-rd",
                 "title": "Nigel Noyes",
-                "color": dark_purple,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.206970,
-                    51.743160
-                ]
+                "coordinates": waypoints.nigel_noyes
             }
         },
         {
@@ -478,15 +339,10 @@ const studios = {
             "properties": {
                 "icon": "17-horns-rd",
                 "title": "Clare Bonnet",
-                "color": dark_purple,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.206730,
-                    51.743010
-                ]
+                "coordinates": waypoints.clare_bonnet
             }
         },
         {
@@ -494,47 +350,32 @@ const studios = {
             "properties": {
                 "icon": "robert-garland",
                 "title": "Robert Garland",
-                "color": dark_purple,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.19346,
-                    51.74321
-                ]
+                "coordinates": waypoints.robert_garland
             }
         },
         {
             "type": "Feature",
             "properties": {
-                "icon": "trixter-studios",
+                "icon": "trixter-studios", // also trickster house
                 "title": "Trixter Studios",
-                "color": dark_green,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.2071928,
-                    51.7377367
-                ]
+                "coordinates": waypoints.trickster_house
             }
         },
         {
             "type": "Feature",
             "properties": {
                 "icon": "daisy-murdoch",
-                "title": "Daisy Murdoch",
-                "color": dark_green,
-                "line-color": "red"
+                "title": "London Road Studios",
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.204594,
-                    51.731906
-                ]
+                "coordinates": waypoints.london_rd
             }
         },
         {
@@ -542,15 +383,10 @@ const studios = {
             "properties": {
                 "icon": "griffin-mill",
                 "title": "Griffin Mill",
-                "color": dark_green,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.204595,
-                    51.731906
-                ]
+                "coordinates": waypoints.griffin_mill
             }
         },
         {
@@ -558,15 +394,10 @@ const studios = {
             "properties": {
                 "icon": "polly-lyster",
                 "title": "Polly Lyster",
-                "color": dark_green,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.174177,
-                    51.732944
-                ]
+                "coordinates": waypoints.polly_lyster
             }
         },
         {
@@ -574,15 +405,10 @@ const studios = {
             "properties": {
                 "icon": "victoria-works",
                 "title": "Victoria Works",
-                "color": dark_green,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.15227962,
-                    51.72098032
-                ]
+                "coordinates": waypoints.victoria_works
             }
         },
         {
@@ -590,15 +416,10 @@ const studios = {
             "properties": {
                 "icon": "sarah-maingot",
                 "title": "Sarah Maingot",
-                "color": dark_green,
-                "line-color": "red"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -2.108463,
-                    51.731540
-                ]
+                "coordinates": waypoints.sarah_maingot
             }
         }
     ]

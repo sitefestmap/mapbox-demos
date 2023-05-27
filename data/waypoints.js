@@ -42,9 +42,9 @@ export const hawkwood = [-2.209216, 51.757352];
 export const the_camp = [-2.1268, 51.782792];
 
 // 5 BISLEY (PURPLE)
-export const unit_3 = [-2.214399, 51.744668];
+export const studio_3 = [-2.214399, 51.744668];
 export const melvyn_warren_smith = [-2.21411838, 51.74450015];
-export const cath_williams = [-2.21247244, 51.7440431];
+export const kath_williams = [-2.21247244, 51.7440431];
 export const piccadilly_mill_east = [-2.210000, 51.7436];
 export const lower_st = [-2.2103256, 51.7431577];
 export const nigel_noyes = [-2.206970, 51.743160]; // 11 horns rd
@@ -56,5 +56,7 @@ export const robert_garland = [-2.19346, 51.74321];
 // 6 GOLDEN VALLEY (GREEN)
 export const trickster_house = [-2.2071928, 51.7377367];
 export const london_rd = [-2.2046, 51.73191];
+export const griffin_mill = [-2.2046, 51.73191]; // check
 export const polly_lyster = [-2.174177, 51.732944];
 export const victoria_works = [-2.15227962, 51.72098032];
+export const sarah_maingot = [-2.108463, 51.731540];

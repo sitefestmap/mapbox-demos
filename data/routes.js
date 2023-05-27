@@ -1,3 +1,18 @@
+const john_st = [-2.22, 51.745];
+const vale = [-2.261437, 51.755535];
+const bisley = [-2.16, 51.755];
+const slad = [-2.198, 51.772];
+const golden_valley = [-2.185, 51.728];
+const nailsworth = [-2.25, 51.726];
+
+const dark_red = '#991f07';
+const dark_blue = '#264a72';
+const dark_orange = '#924806';
+const dark_purple = '#371998';
+const dark_green = '#0a6937';
+const dark_mid_blue = '#142fa4'
+
+const routes =
 {
     "type": "FeatureCollection",
     "features": [
@@ -5,73 +20,75 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.22, 51.745]
+                "coordinates": john_st
             },
             "properties": {
-                "title": "Stroud Town Centre",
-                "icon" : "mapbox-marker-icon-red",
-                "color":  "#f84d4d"
+                "title": "Stroud",
+                "icon" : "",
+                "color": dark_red
             }
         },
         {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.261437, 51.753195]
+                "coordinates": vale
             },
             "properties": {
                 "title": "Valley and Vale",
-                "icon" : "mapbox-marker-icon-gray",
-                "color":  "#40546a"
+                "icon" : "",
+                "color": dark_blue
             }
         },
         {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.185, 51.744]
+                "coordinates": bisley
             },
             "properties": {
                 "title": "Bisley",
-                "icon" : "mapbox-marker-icon-purple",
-                "color":  "#7753eb"
+                "icon" : "",
+                "color": dark_purple
             }
         },
         {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.193, 51.767]
+                "coordinates": slad
             },
             "properties": {
                 "title": "Slad Valley",
-                "icon" : "mapbox-marker-icon-orange",
-                "color":  "#f79640"
+                "icon" : "",
+                "color": dark_orange
             }
         },
         {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.16, 51.735]
+                "coordinates": golden_valley
             },
             "properties": {
                 "title": "Golden Valley",
-                "icon" : "mapbox-marker-icon-green",
-                "color":  "#207a4b"
+                "icon" : "",
+                "color": dark_green
             }
         },
         {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-2.2, 51.71]
+                "coordinates": nailsworth
             },
             "properties": {
                 "title": "Nailsworth Valley",
-                "icon" : "mapbox-marker-icon-blue",
-                "color":  "#4264fb"
+                "icon" : "",
+                "color": dark_mid_blue
             }
         }
     ]
 }
+
+export default routes;

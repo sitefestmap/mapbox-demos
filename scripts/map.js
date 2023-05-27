@@ -16,14 +16,13 @@ import mapboxgl from 'mapbox-gl';
 import multi_polygon from '../data/polygons/multipolygon.js';
 
 // Dynamic Symbols Layer (Icons + Text)
-import studios from '../data/studios.json' assert { type: 'json' };
-//import studios from '../data/studios.js'
+import studios from '../data/studios.js'
 
 // Static initial markers
 import studio_markers from '../data/studio-markers.js';
 
 // Route Labels - Needs Numbered Icons
-// import routes from '/data/routes.json' assert { type: 'json' };
+import routes from '/data/routes.js'
 
 // For custom route color /
 import styles from '/scripts/styles.js'
@@ -97,34 +96,6 @@ map.on('load', () => {
     map.addControl(directions,
         'top-left'
     );
-    
-    // Boring Polygon
-    /*
-        map.addSource('polygon', {
-            'type': 'geojson',
-            'data': polygon
-        });
-        map.addLayer({
-            'id': 'polygon',
-            'type': 'fill',
-            'source': 'polygon',
-            'layout': {},
-            'paint': {
-                'fill-color': '#0080ff',
-                'fill-opacity': 0.1
-            }
-        });
-        map.addLayer({
-            'id': 'outline',
-            'type': 'line',
-            'source': 'polygon',
-            'layout': {},
-            'paint': {
-                'line-color': '#000',
-                'line-width': 1
-            }
-        });
-    */
 
     /* MULTIPOLYGON */
     map.addSource('multi_polygon', {
@@ -160,7 +131,7 @@ map.on('load', () => {
     /**
      * @Routes (5 Valleys)
      */
-/*
+
     map.addSource('routes', {
         'type': 'geojson',
         'data': routes
@@ -170,8 +141,8 @@ map.on('load', () => {
         'type': 'symbol',
         'source': 'routes',
         'layout': {
-            'icon-image': ['get', 'icon'],
-            'icon-size': 1.1,
+            // 'icon-image': ['get', 'icon'],
+           // 'icon-size': 1.1,
             'text-field': ['get', 'title'],
             'icon-allow-overlap': true,
             'text-allow-overlap': true,
@@ -181,13 +152,13 @@ map.on('load', () => {
             ],
             'text-offset': [0, 0.5],
             'text-anchor': 'top',
-            'text-size': 24
+            'text-size': 22
         },
         'paint': {
             'text-color': ['get', 'color']
         }
     });
-    */
+    
 
     /**
      * @studios
