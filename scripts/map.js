@@ -12,29 +12,23 @@ import mapboxgl from 'mapbox-gl';
 // Sort dep error
 // import MapboxDirections from 'mapbox/mapbox-gl-directions';
 
-// import polygon from '/data/polygons/pentagon.json' assert { type: 'json' };
-// import polygon from '/data/polygons/triangle.json' assert { type: 'json' };
-// import polygon from '/data/polygons/square.json' assert { type: 'json' };
-// import polygon from '/data/polygons/circle.json' assert { type: 'json' };
-
-// Polygons
-import towncentre from '/data/polygons/towncentre.json' assert { type: 'json' };
-import nailsworth from '/data/polygons/nailsworth.json' assert { type: 'json' };
-import vale from '/data/polygons/vale.json' assert { type: 'json' };
-import slad from '/data/polygons/slad.json' assert { type: 'json' };
-import goldenvalley from '/data/polygons/goldenvalley.json' assert { type: 'json' };
-import bisley from '/data/polygons/bisley.json' assert { type: 'json' };
+// Color coded areas
 import multi_polygon from '../data/polygons/multipolygon.js';
-import test from '../data/polygons/test.js';
 
-import routes from '/data/routes.json' assert { type: 'json' };
-import studios from '/data/studios.json' assert { type: 'json' };
-import studio_markers from '/data/studio-markers.js';
+// Dynamic Symbols Layer (Icons + Text)
+import studios from '../data/studios.json' assert { type: 'json' };
+
+// Static initial markers
+import studio_markers from '../data/studio-markers.js';
+
+// Route Labels - Needs Numbered Icons
+// import routes from '/data/routes.json' assert { type: 'json' };
+
+// For custom route color /
 import styles from '/scripts/styles.js'
 
+// Initial Mapbox Setup
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ';
-
-const filterGroup = document.getElementById('filter-group');
 
 const map = new mapboxgl.Map({
     container: 'map',
@@ -42,6 +36,9 @@ const map = new mapboxgl.Map({
     center: [-2.181235, 51.736333],
     zoom: 11.5
 });
+
+// Demo Checkboxes
+const filterGroup = document.getElementById('filter-group');
 
 // Initial markers for all studios
 studio_markers.forEach(({studio, color, lngLat}) => {
@@ -55,9 +52,7 @@ studio_markers.forEach(({studio, color, lngLat}) => {
     .setPopup(popup)
     .addTo(map)
 
-   /* marker.addEventListener('mouseenter', function() {
-        popup.togglePopup()
-    }) */
+   /* add Listeners for hover? */
 })
 
 map.on('load', () => {
@@ -86,10 +81,9 @@ map.on('load', () => {
         new MapboxDirections({
             accessToken: mapboxgl.accessToken,
             unit: 'metric',
-           //steps: true,
-           //banner_instructions: true,
-            // coordinates: 
-            profile: 'mapbox/cycling',
+            // steps: true,
+            // banner_instructions: true,
+            profile: 'mapbox/driving',
             alternatives: false,
             controls: {
                 instructions: false,
@@ -102,226 +96,36 @@ map.on('load', () => {
     map.addControl(directions,
         'top-left'
     );
-
     
-/* MAIN POLYGON
-
-    map.addSource('polygon', {
-        'type': 'geojson',
-        'data': polygon
-    });
-    map.addLayer({
-        'id': 'polygon',
-        'type': 'fill',
-        'source': 'polygon',
-        'layout': {},
-        'paint': {
-            'fill-color': '#0080ff',
-            'fill-opacity': 0.1
-        }
-    });
-    map.addLayer({
-        'id': 'outline',
-        'type': 'line',
-        'source': 'polygon',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': 1
-        }
-    });
-
+    // Boring Polygon
+    /*
+        map.addSource('polygon', {
+            'type': 'geojson',
+            'data': polygon
+        });
+        map.addLayer({
+            'id': 'polygon',
+            'type': 'fill',
+            'source': 'polygon',
+            'layout': {},
+            'paint': {
+                'fill-color': '#0080ff',
+                'fill-opacity': 0.1
+            }
+        });
+        map.addLayer({
+            'id': 'outline',
+            'type': 'line',
+            'source': 'polygon',
+            'layout': {},
+            'paint': {
+                'line-color': '#000',
+                'line-width': 1
+            }
+        });
     */
 
-
-
-
-   /* map.addSource('test', {
-        'type': 'geojson',
-        'data': test
-    });
-    map.addLayer({
-        'id': 'test',
-        'type': 'fill',
-        'source': 'test',
-        'layout': {},
-        'paint': {
-            'fill-color': '#f84d4d',
-            'fill-opacity': polygon_opacity
-        }
-    });
-     map.addLayer({
-        'id': 'test-outline',
-        'type': 'line',
-        'source': 'test',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': line_width
-        }
-    });*/
-   /*
-
-    map.addSource('towncentre', {
-        'type': 'geojson',
-        'data': towncentre
-    });
-    map.addLayer({
-        'id': 'towncentre',
-        'type': 'fill',
-        'source': 'towncentre',
-        'layout': {},
-        'paint': {
-            'fill-color': '#f84d4d',
-            'fill-opacity': polygon_opacity
-        }
-    });
-    map.addLayer({
-        'id': 'town-outline',
-        'type': 'line',
-        'source': 'towncentre',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': line_width
-        }
-    }); /*
-
-    map.addSource('nailsworth', {
-        'type': 'geojson',
-        'data': nailsworth
-    });
-    map.addLayer({
-        'id': 'nailsworth',
-        'type': 'fill',
-        'source': 'nailsworth',
-        'layout': {},
-        'paint': {
-            'fill-color': '#4264fb',
-            'fill-opacity': polygon_opacity
-        }
-    });
-    map.addLayer({
-        'id': 'nailsworth-outline',
-        'type': 'line',
-        'source': 'nailsworth',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': line_width
-        }
-    });
-
-    map.addSource('vale', {
-        'type': 'geojson',
-        'data': vale
-    });
-    map.addLayer({
-        'id': 'vale',
-        'type': 'fill',
-        'source': 'vale',
-        'layout': {},
-        'paint': {
-            'fill-color': '#40546a',
-            'fill-opacity': polygon_opacity
-        }
-    });
-    map.addLayer({
-        'id': 'vale-outline',
-        'type': 'line',
-        'source': 'vale',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': line_width
-        }
-    });
-
-
-    // 4 SLAD POLY
-    map.addSource('slad', {
-        'type': 'geojson',
-        'data': slad
-    });
-    map.addLayer({
-        'id': 'slad',
-        'type': 'fill',
-        'source': 'slad',
-        'layout': {},
-        'paint': {
-            'fill-color': '#f79640',
-            'fill-opacity': 0.3
-        }
-    });
-    map.addLayer({
-        'id': 'slad-outline',
-        'type': 'line',
-        'source': 'slad',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': line_width
-        }
-    });
-
-    // 5 bisley
-    map.addSource('bisley', {
-        'type': 'geojson',
-        'data': bisley
-    });
-    map.addLayer({
-        'id': 'bisley',
-        'type': 'fill',
-        'source': 'bisley',
-        'layout': {},
-        'paint': {
-            'fill-color': '#7753eb',
-            'fill-opacity': 0.3
-        }
-    });
-    map.addLayer({
-        'id': 'bisley-outline',
-        'type': 'line',
-        'source': 'bisley',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': line_width
-        }
-    });
-
-    map.addSource('goldenvalley', {
-        'type': 'geojson',
-        'data': goldenvalley
-    });
-    map.addLayer({
-        'id': 'goldenvalley',
-        'type': 'fill',
-        'source': 'goldenvalley',
-        'layout': {},
-        'paint': {
-            'fill-color': '#207a4b',
-            'fill-opacity': 0.3
-        }
-    });
-    map.addLayer({
-        'id': 'golden-outline',
-        'type': 'line',
-        'source': 'goldenvalley',
-        'layout': {},
-        'paint': {
-            'line-color': '#000',
-            'line-width': line_width
-        }
-    }); */
-
     /* MULTIPOLYGON */
-
-   // const polygon_colors = ['#f84d4d', '#4264fb', '#40546a', '#f79640', '#7753eb', '#207a4b'];
-
-   const line_width = 2;
-   const polygon_opacity = 0.5;
-
     map.addSource('multi_polygon', {
         type: 'geojson',
         data: multi_polygon
@@ -329,7 +133,6 @@ map.on('load', () => {
 
       multi_polygon.features.forEach((feature) => {
         const layerID = `polygon-${feature.properties.color}`
-        const polygon_opacity = 0.5;
         map.addLayer({
           id: layerID,
           type: 'fill',
@@ -349,10 +152,9 @@ map.on('load', () => {
         'layout': {},
         'paint': {
             'line-color': '#000',
-            'line-width': line_width
+            'line-width': 2
         }
     });
-
 
     /**
      * @Routes (5 Valleys)
@@ -420,15 +222,17 @@ map.on('load', () => {
                     'text-size': 18
                 },
                 'paint': {
-                    'text-color': ['get', 'color'],
-                    'line-color': '#ffffff',
-                    'line-width': 6
+                    //'text-color': ['get', 'color'],
+                    'text-color': '#111'
+                   
                 },
                'filter': ['==', 'icon', symbol]
-
             });
+
+            // Start with no dynamic layers on map
             map.setLayoutProperty(layerID, 'visibility', 'none');
 
+            // Create checkboxes for layers
             const input = document.createElement('input');
             input.type = 'checkbox';
             input.id = layerID;
@@ -440,6 +244,7 @@ map.on('load', () => {
             label.textContent = symbol;
             filterGroup.appendChild(label);
            
+            // Set User location as origin / destination
             navigator.geolocation.getCurrentPosition(function(position) {
                 var userLongitude = position.coords.longitude;
                 var userLatitude = position.coords.latitude;
@@ -448,7 +253,7 @@ map.on('load', () => {
             })
 
             /**
-             * Route Colour
+             * Custom Route Colour
              */
 
              // Listen to the `route` event
@@ -460,7 +265,6 @@ map.on('load', () => {
                 map.setPaintProperty('directions-route-line', 'line-color', routeColor, 'line-width', 8);
                 map.setPaintProperty('directions-route-line-alt', 'line-color', routeOutlineColor);                
             });
-            
 
             // If want to add waypoint but don't remove on uncheck
            /* input.addEventListener('change', (e) => {

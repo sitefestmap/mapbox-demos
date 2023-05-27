@@ -11,8 +11,6 @@ const outside_bottom_right = [-2.12433, 51.723189];
 const outside_top_left = [-2.247626, 51.794135];
 const outside_top_right = [-2.12014, 51.784184];
 
-//const polygon_colors = ['#f84d4d', '#4264fb', '#40546a', '#f79640', '#7753eb', '#207a4b'];
-
 const red = '#f84d4d'
 const mid_blue = '#4264fb'
 const blue = '#40546a' 

@@ -2,8 +2,8 @@
     --bg: hsl(10 75% 50%);
     --text: hsl(0 0% 95%);
     --border: rgba(0, 0, 0, 0.25);
-    --fontstack: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     --border-radius: 4px;
+    --fontstack: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     --red : hsl(10 70% 50%); /* #f84d4d */
     --text: hsl(0 0% 95%);
 }
@@ -34,7 +34,7 @@ body {
     right: 0;
     z-index: 1;
     height: 100%;
-    width: clamp(5rem, 15vw, 10rem);
+    width: clamp(5rem, 15vw, 10rem); /* Delete */
     overflow-y: scroll;
     border-radius: 3px;
     color: var(--text);
