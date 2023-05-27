@@ -1,4 +1,11 @@
-{
+const dark_red = '#7e0000'; // hsl 0 100 25
+const dark_mid_blue = '#03197b';
+const dark_blue = '#303f50';
+const dark_orange = '#7e3e05';
+const dark_purple = '#250d72';
+const dark_green = '#1a663e'
+
+const studios = {
     "type": "FeatureCollection",
     
     "features": [
@@ -7,7 +14,7 @@
             "properties": {
                 "icon": "john-st-studios",
                 "title": "John St Studios",
-                "color": "#f84d4d",
+                "color": dark_red,
                 "line-color": "red"
             },
             "geometry": {
@@ -23,7 +30,7 @@
             "properties": {
                 "icon": "weven",
                 "title": "Weven",
-                "color": "#f84d4d",
+                "color": dark_red,
                 "line-color": "red"
             },
             "geometry": {
@@ -39,7 +46,7 @@
             "properties": {
                 "icon": "cacao-circle",
                 "title": "Cacao Circle",
-                "color": "#f84d4d",
+                "color": dark_red,
                 "line-color": "red"
             },
             "geometry": {
@@ -55,7 +62,7 @@
             "properties": {
                 "icon": "high-st",
                 "title": "High St",
-                "color": "#f84d4d",
+                "color": dark_red,
                 "line-color": "red"
             },
             "geometry": {
@@ -71,7 +78,7 @@
             "properties": {
                 "icon": "bath-rd",
                 "title": "135 Bath Road",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -87,7 +94,7 @@
             "properties": {
                 "icon": "bath-rd-143",
                 "title": "143 Bath Road",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -103,7 +110,7 @@
             "properties": {
                 "icon": "marven-st-chloe",
                 "title": "Marven St Chloe",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -119,7 +126,7 @@
             "properties": {
                 "icon": "frogmarsh",
                 "title": "Frogmarsh Mill",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -135,7 +142,7 @@
             "properties": {
                 "icon": "article",
                 "title": "Article Studio",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -151,7 +158,7 @@
             "properties": {
                 "icon": "the-hide",
                 "title": "The Hide",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -167,7 +174,7 @@
             "properties": {
                 "icon": "nutshell",
                 "title": "The Nutshell Studios",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -183,7 +190,7 @@
             "properties": {
                 "icon": "three-storeys",
                 "title": "Three Storeys",
-                "color": "#4264fb",
+                "color": dark_mid_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -199,7 +206,7 @@
             "properties": {
                 "icon": "museum-in-the-park",
                 "title": "Walled Garden Pop-up Studio",
-                "color": "#40546a",
+                "color": dark_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -215,7 +222,7 @@
             "properties": {
                 "icon": "studio-tuft",
                 "title": "Studio Tuft",
-                "color": "#40546a",
+                "color": dark_blue,
                 "line-color": "red"
             },
             "geometry": {
@@ -231,7 +238,7 @@
             "properties": {
                 "icon": "houseworkwork",
                 "title": "Houseworkwork",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -247,7 +254,7 @@
             "properties": {
                 "icon": "landsdown-hall",
                 "title": "LandsdownHall",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -262,24 +269,8 @@
             "type": "Feature",
             "properties": {
                 "icon": "may-derbyshire",
-                "title": "May Derbyshire",
-                "color": "#f79640",
-                "line-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -2.214580,
-                    51.747230
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "icon": "mark-derbyshire",
-                "title": "Mark Derbyshire",
-                "color": "#f79640",
+                "title": "May / Mark Derbyshire",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -295,7 +286,7 @@
             "properties": {
                 "icon": "jack-duplock",
                 "title": "Jack Duplock",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -311,7 +302,7 @@
             "properties": {
                 "icon": "stroud-pottery",
                 "title": "Stroud Pottery",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -327,7 +318,7 @@
             "properties": {
                 "icon": "lucy-inder",
                 "title": "Lucy Inder",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -343,7 +334,7 @@
             "properties": {
                 "icon": "sam-marsh",
                 "title": "Sam Marsh",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -359,7 +350,7 @@
             "properties": {
                 "icon": "andy-bradley",
                 "title": "Andy Bradley",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -375,7 +366,7 @@
             "properties": {
                 "icon": "hawkwood",
                 "title": "Hawkwood CFT",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -391,7 +382,7 @@
             "properties": {
                 "icon": "the-camp",
                 "title": "The Camp",
-                "color": "#f79640",
+                "color": dark_orange,
                 "line-color": "red"
             },
             "geometry": {
@@ -407,7 +398,7 @@
             "properties": {
                 "icon": "studio-3",
                 "title": "Studio 3",
-                "color": "#7753eb",
+                "color": dark_purple,
                 "line-color": "red"
             },
             "geometry": {
@@ -423,7 +414,7 @@
             "properties": {
                 "icon": "melvyn-warren-smith",
                 "title": "Melvyn Warren Smith",
-                "color": "#7753eb",
+                "color": dark_purple,
                 "line-color": "red"
             },
             "geometry": {
@@ -439,7 +430,7 @@
             "properties": {
                 "icon": "kath-williams",
                 "title": "Kath Williams",
-                "color": "#7753eb",
+                "color": dark_purple,
                 "line-color": "red"
             },
             "geometry": {
@@ -455,7 +446,7 @@
             "properties": {
                 "icon": "lower-st",
                 "title": "Lower St",
-                "color": "#7753eb",
+                "color": dark_purple,
                 "line-color": "red"
             },
             "geometry": {
@@ -471,7 +462,7 @@
             "properties": {
                 "icon": "11-horns-rd",
                 "title": "Nigel Noyes",
-                "color": "#7753eb",
+                "color": dark_purple,
                 "line-color": "red"
             },
             "geometry": {
@@ -487,7 +478,7 @@
             "properties": {
                 "icon": "17-horns-rd",
                 "title": "Clare Bonnet",
-                "color": "#7753eb",
+                "color": dark_purple,
                 "line-color": "red"
             },
             "geometry": {
@@ -503,7 +494,7 @@
             "properties": {
                 "icon": "robert-garland",
                 "title": "Robert Garland",
-                "color": "#7753eb",
+                "color": dark_purple,
                 "line-color": "red"
             },
             "geometry": {
@@ -519,7 +510,7 @@
             "properties": {
                 "icon": "trixter-studios",
                 "title": "Trixter Studios",
-                "color": "#207a4b",
+                "color": dark_green,
                 "line-color": "red"
             },
             "geometry": {
@@ -535,7 +526,7 @@
             "properties": {
                 "icon": "daisy-murdoch",
                 "title": "Daisy Murdoch",
-                "color": "#207a4b",
+                "color": dark_green,
                 "line-color": "red"
             },
             "geometry": {
@@ -551,7 +542,7 @@
             "properties": {
                 "icon": "griffin-mill",
                 "title": "Griffin Mill",
-                "color": "#207a4b",
+                "color": dark_green,
                 "line-color": "red"
             },
             "geometry": {
@@ -567,7 +558,7 @@
             "properties": {
                 "icon": "polly-lyster",
                 "title": "Polly Lyster",
-                "color": "#207a4b",
+                "color": dark_green,
                 "line-color": "red"
             },
             "geometry": {
@@ -583,7 +574,7 @@
             "properties": {
                 "icon": "victoria-works",
                 "title": "Victoria Works",
-                "color": "#207a4b",
+                "color": dark_green,
                 "line-color": "red"
             },
             "geometry": {
@@ -599,7 +590,7 @@
             "properties": {
                 "icon": "sarah-maingot",
                 "title": "Sarah Maingot",
-                "color": "#207a4b",
+                "color": dark_green,
                 "line-color": "red"
             },
             "geometry": {
@@ -612,3 +603,5 @@
         }
     ]
 }
+
+export default studios;

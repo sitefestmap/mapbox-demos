@@ -1,3 +1,5 @@
+import * as waypoints from './waypoints';
+
 const red       = `hsl(10  70% 50%)`;
 const mid_blue  = `hsl(195 70% 50%)`;
 const dark_blue = `hsl(215 70% 50%)`;
@@ -6,208 +8,246 @@ const purple    = `hsl(280 70% 50%)`;
 const green     = `hsl(150 70% 50%)`;
 
 const studio_markers = [
+    // Route 1 Town Centre (Red)
     {
         studio: `<h2>John St Studios</h2>
         <p>...more info</p>`,
         color: `${red}`,
-        lngLat: [-2.2167788, 51.7445037],
+        lngLat: waypoints.john_st
     },
     {
         studio: `<h2>Weven</h2>
         <p>...more info</p>`,
         color: `${red}`,
-        lngLat: [-2.21798684, 51.74506395],
+        lngLat: waypoints.weven
     },
     {
         studio: `<h2>Cacao Circle</h2>
         <p>...more info</p>`,
         color: `${red}`,
-        lngLat: [-2.2170453, 51.7451129],
+        lngLat: waypoints.cacao_circle
     },
     {
         studio: `<h2>High St</h2>
         <p>...more info</p>`,
         color: `${red}`,
-        lngLat: [-2.21523121, 51.7451931],
+        lngLat: waypoints.high_st
     },
-    // Route 2
+    // Route 2 Nailsworth (Mid blue)
     {
-        studio: `<h2>Bath Road</h2>
+        studio: `<h2>135 Bath Road</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.2221152, 51.744348],
+        lngLat: waypoints.bath_rd_135
+    },
+    {
+        studio: `<h2>143 Bath Road</h2>
+        <p>...more info</p>`,
+        color: `${mid_blue}`,
+        lngLat: waypoints.bath_rd_143
     },
     {
         studio: `<h2>Marven St Chloe</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.2185467, 51.7101307],
+        lngLat: waypoints.marven_st_chloe
     },
     {
         studio: `<h2>Frogmarsh Mill</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.2325759, 51.7154552],
+        lngLat: waypoints.frogmarsh_mill
     },
     {
         studio: `<h2>Article Studio</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.2279565, 51.7085009],
+        lngLat: waypoints.article_studio
     },
     {
         studio: `<h2>The Hide</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.2190762, 51.7071444],
+        lngLat: waypoints.the_hide
     },
     {
         studio: `<h2>The Nutshell Studios</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.2191816, 51.695219],
+        lngLat: waypoints.nutshell_studios
     },
     {
         studio: `<h2>Three Storeys</h2>
         <p>...more info</p>`,
         color: `${mid_blue}`,
-        lngLat: [-2.220, 51.692],
+        lngLat: waypoints.three_storeys
     },
-    // Route 3
+    // Route 3 VALE (BLUE)
     {
-        studio: `<h2>Museum in the Park</h2>
+        studio: `<h2>Walled Garden</h2>
         <p>...more info</p>`,
         color: `${dark_blue}`,
-        lngLat: [-2.22542, 51.7506206],
+        lngLat: waypoints.walled_garden
     },
     {
         studio: `<h2>Studio Tuft</h2>
         <p>...more info</p>`,
         color: `${dark_blue}`,
-        lngLat: [-2.2809237, 51.7460296],
+        lngLat: waypoints.studio_tuft
     },
     // Route 4
     {
         studio: `<h2>Houseworkwork</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.21443438, 51.7465302],
+        lngLat: waypoints.houseworkwork
     },
     {
         studio: `<h2>Landsdown Hall</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.2165839, 51.7463608],
+        lngLat: waypoints.landsdown_hall
+    },
+    {
+        studio: `<h2>Jack Duplock</h2>
+        <p>...more info</p>`,
+        color: `${orange}`,
+        lngLat: waypoints.jack_duplop
     },
     {
         studio: `<h2>Stroud Pottery</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.2157922, 51.7472264],
+        lngLat: waypoints.stroud_pottery
+    },
+    {   
+        studio: `<h2>May Derbyshire</h2>
+        <p>...more info</p>`,
+        color: `${orange}`,
+        lngLat: waypoints.may_derbyshire
+    },
+    {   // combine into 1?
+        studio: `<h2>Mark Derbyshire</h2>
+        <p>...more info</p>`,
+        color: `${orange}`,
+        lngLat: waypoints.mark_derbyshire
     },
     {
         studio: `<h2>Lucy Inder</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.2165653, 51.7487422],
+        lngLat: waypoints.lucy_inder
     },
     {
         studio: `<h2>Sam Marsh</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.2121959, 51.7504326],
+        lngLat: waypoints.sam_marsh
     },
     {
         studio: `<h2>Andy Bradley</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.20618, 51.75065],
+        lngLat: waypoints.andy_bradley
     },
     {
         studio: `<h2>Hawkwood</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.209216, 51.757352],
+        lngLat: waypoints.hawkwood
     },
     {
         studio: `<h2>The Camp</h2>
         <p>...more info</p>`,
         color: `${orange}`,
-        lngLat: [-2.1268, 51.782792],
+        lngLat: waypoints.the_camp
     },
     // Route 5
     {
         studio: `<h2>Unit 3</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.214399, 51.744668],
+        lngLat: waypoints.unit_3
     },
     {
         studio: `<h2>Melvyn Warren-Smith</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.21411838, 51.74450015],
+        lngLat: waypoints.melvyn_warren_smith
     },
     {
         studio: `<h2>Kath Williams</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.21247244, 51.7440431],
+        lngLat: waypoints.cath_williams
     },
     {
         studio: `<h2>Piccadilly Mill East</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.210000, 51.7436],
+        lngLat: waypoints.piccadilly_mill_east
     },
     {
         studio: `<h2>Lower St</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.2103256, 51.7431577],
+        lngLat: waypoints.lower_st
+    },
+    {
+        studio: `<h2>Nigel Noyes</h2>
+        <p>...more info</p>`,
+        color: `${purple}`,
+        lngLat: waypoints.nigel_noyes
+    },
+    {
+        studio: `<h2>Clare Bonnet</h2>
+        <p>...more info</p>`,
+        color: `${purple}`,
+        lngLat: waypoints.clare_bonnet
     },
     {
         studio: `<h2>Caroline Jamfrey</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.20706, 51.74235],
+        lngLat: waypoints.caroline_jamfrey
     },
-    {
+    /*{
         studio: `<h2>Horns Rd</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.2070316, 51.7431274],
-    },
+        lngLat: waypoints.horns_rd
+    }, */
+
     {
         studio: `<h2>Robert Garland</h2>
         <p>...more info</p>`,
         color: `${purple}`,
-        lngLat: [-2.19346, 51.74321],
+        lngLat: waypoints.robert_garland
     },
-    // Route 6
+    // Route 6 Golden Valley (Green)
     {
         studio: `<h2>Trixter House</h2>
         <p>...more info</p>`,
         color: `${green}`,
-        lngLat: [-2.2071928, 51.7377367],
+        lngLat: waypoints.trickster_house
     },
     {
         studio: `<h2>London Road</h2>
         <p>...more info</p>`,
         color: `${green}`,
-        lngLat: [-2.2046, 51.73191],
+        lngLat: waypoints.london_rd
     },
     {
         studio: `<h2>Polly Lyster</h2>
         <p>...more info</p>`,
         color: `${green}`,
-        lngLat: [-2.174177, 51.732944],
+        lngLat: waypoints.polly_lyster
     },
     {
         studio: `<h2>Victoria Works</h2>
         <p>...more info</p>`, // London Road
         color: `${green}`,
-        lngLat: [-2.15227962, 51.72098032],
+        lngLat: waypoints.victoria_works
     },
 ]
 

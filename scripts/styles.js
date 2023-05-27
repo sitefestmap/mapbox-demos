@@ -160,7 +160,7 @@ const style = [{
     'type': 'symbol',
     'source': 'directions',
     'layout': {
-      'text-field': 'You',
+      'text-field': 'Here',
       'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
       'text-size': 11
     },

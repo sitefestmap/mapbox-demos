@@ -17,6 +17,7 @@ import multi_polygon from '../data/polygons/multipolygon.js';
 
 // Dynamic Symbols Layer (Icons + Text)
 import studios from '../data/studios.json' assert { type: 'json' };
+//import studios from '../data/studios.js'
 
 // Static initial markers
 import studio_markers from '../data/studio-markers.js';
@@ -83,7 +84,7 @@ map.on('load', () => {
             unit: 'metric',
             // steps: true,
             // banner_instructions: true,
-            profile: 'mapbox/driving',
+            profile: 'mapbox/cycling',
             alternatives: false,
             controls: {
                 instructions: false,
@@ -222,7 +223,7 @@ map.on('load', () => {
                     'text-size': 17
                 },
                 'paint': {
-                    //'text-color': ['get', 'color'],
+                    // 'text-color': ['get', 'color'],
                     'text-color': '#111'
                    
                 },
