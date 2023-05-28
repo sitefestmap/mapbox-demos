@@ -1,14 +1,28 @@
-const center_bottom = [-2.217850418218603, 51.74117023834362];
+const left = '-2.325';
+const top_intersection = '-2.2477';
+const right = '-2.10000';
+const top = '51.7900';
+const bottom = '51.6875';
+const bottom_intersection = '-2.206785';
+const left_intersection = '51.727967';
+
+const center_bottom = [-2.217850418218603, 51.74107023834362];
 const center_bottom_left = [-2.223084174810481, 51.745370277385945];
 const center_top_left = [-2.220203207878683, 51.74711993736873];
 const center_top_right = [-2.214924597164244, 51.74534944307196];
 const center_bottom_right = [-2.214825402940761, 51.74251835473324];
 
-const outside_bottom = [-2.206785, 51.685108];
-const outside_bottom_left = [-2.323886, 51.727967];
-const outside_bottom_right = [-2.10405, 51.733189];
-const outside_top_left = [-2.247626, 51.794135];
-const outside_top_right = [-2.12014, 51.784184];
+const outside_bottom = [bottom_intersection, bottom];
+const outside_bottom_left = [left, left_intersection];
+const outside_bottom_right = [right, 51.733189];
+const outside_top_left = [top_intersection, top];
+
+const top_left_corner = [left, top]; // new 
+const left_bottom_corner =  [left, bottom]; // left
+const right_bottom_corner = [right, bottom];
+
+// const outside_top_right = [-2.12014, 51.784184]; // old
+const outside_top_right = [right, top];
 
 const red = '#f84d4d'
 const mid_blue = '#4264fb'
@@ -47,6 +61,7 @@ const multi_polygon = {
                         center_bottom,
                         center_bottom_left,
                         outside_bottom_left,
+                        left_bottom_corner,
                         outside_bottom,
                         center_bottom
                     ]
@@ -63,6 +78,7 @@ const multi_polygon = {
                         center_top_left,
                         center_bottom_left,
                         outside_bottom_left,
+                        top_left_corner, // new
                         outside_top_left,
                         center_top_left
                     ]
@@ -114,6 +130,7 @@ const multi_polygon = {
                         center_bottom_right,
                         center_bottom,
                         outside_bottom,
+                        right_bottom_corner,
                         outside_bottom_right,
                         center_bottom_right
                     ]

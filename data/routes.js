@@ -1,5 +1,5 @@
 const john_st = [-2.22, 51.745];
-const vale = [-2.261437, 51.755535];
+const vale = [-2.268437, 51.768535];
 const bisley = [-2.16, 51.755];
 const slad = [-2.198, 51.772];
 const golden_valley = [-2.185, 51.728];
