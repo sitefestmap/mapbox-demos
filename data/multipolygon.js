@@ -5,6 +5,7 @@ const top = '51.7900';
 const bottom = '51.6875';
 const bottom_intersection = '-2.206785';
 const left_intersection = '51.727967';
+const right_intersection = '51.733189'
 
 const center_bottom = [-2.217850418218603, 51.74107023834362];
 const center_bottom_left = [-2.223084174810481, 51.745370277385945];
@@ -14,7 +15,7 @@ const center_bottom_right = [-2.214825402940761, 51.74251835473324];
 
 const outside_bottom = [bottom_intersection, bottom];
 const outside_bottom_left = [left, left_intersection];
-const outside_bottom_right = [right, 51.733189];
+const outside_bottom_right = [right, right_intersection];
 const outside_top_left = [top_intersection, top];
 
 const top_left_corner = [left, top]; // new 

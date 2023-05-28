@@ -5,15 +5,13 @@
  */
 
 import mapboxgl from 'mapbox-gl';
-
-// Sort dep error
 // import MapboxDirections from 'mapbox/mapbox-gl-directions';
 
 import multi_polygon from '../data/multipolygon.js';
 import studios from '../data/studios.js';
 import studio_markers from '../data/studio-markers.js';
 import routes from '../data/routes.js';
-import styles from './styles.js';
+import styles from '../styles/styles.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ';
 
@@ -192,7 +190,6 @@ map.on('load', () => {
             })
             
             directions.on('route', function() {
-                var routeColor = '#f84d4d';
                 var routeColor = '#ff6868';
                 var routeOutlineColor = '#111';
                 map.setPaintProperty('directions-route-line', 'line-color', routeColor, 'line-width', 8);
